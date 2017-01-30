@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12B650FA1E39424700A5210F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B650F91E39424700A5210F /* AppDelegate.swift */; };
+		12B650FC1E39424700A5210F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B650FB1E39424700A5210F /* ViewController.swift */; };
+		12B650FF1E39424700A5210F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B650FD1E39424700A5210F /* Main.storyboard */; };
+		12B651011E39424700A5210F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B651001E39424700A5210F /* Assets.xcassets */; };
+		12B651041E39424700A5210F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B651021E39424700A5210F /* LaunchScreen.storyboard */; };
+		12B6510C1E3948EE00A5210F /* home alone.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B6510B1E3948EE00A5210F /* home alone.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12B650F61E39424700A5210F /* Lost Phone App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lost Phone App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12B650F91E39424700A5210F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		12B650FB1E39424700A5210F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12B650FE1E39424700A5210F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12B651001E39424700A5210F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12B651031E39424700A5210F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		12B651051E39424700A5210F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B6510B1E3948EE00A5210F /* home alone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home alone.png"; path = "Assets.xcassets/home alone.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12B650F31E39424700A5210F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12B650ED1E39424700A5210F = {
+			isa = PBXGroup;
+			children = (
+				12B650F81E39424700A5210F /* Lost Phone App */,
+				12B650F71E39424700A5210F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		12B650F71E39424700A5210F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12B650F61E39424700A5210F /* Lost Phone App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		12B650F81E39424700A5210F /* Lost Phone App */ = {
+			isa = PBXGroup;
+			children = (
+				12B650F91E39424700A5210F /* AppDelegate.swift */,
+				12B650FB1E39424700A5210F /* ViewController.swift */,
+				12B650FD1E39424700A5210F /* Main.storyboard */,
+				12B651001E39424700A5210F /* Assets.xcassets */,
+				12B651021E39424700A5210F /* LaunchScreen.storyboard */,
+				12B6510B1E3948EE00A5210F /* home alone.png */,
+				12B651051E39424700A5210F /* Info.plist */,
+			);
+			path = "Lost Phone App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		12B650F51E39424700A5210F /* Lost Phone App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12B651081E39424700A5210F /* Build configuration list for PBXNativeTarget "Lost Phone App" */;
+			buildPhases = (
+				12B650F21E39424700A5210F /* Sources */,
+				12B650F31E39424700A5210F /* Frameworks */,
+				12B650F41E39424700A5210F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lost Phone App";
+			productName = "Lost Phone App";
+			productReference = 12B650F61E39424700A5210F /* Lost Phone App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		12B650EE1E39424700A5210F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Josh Barrett";
+				TargetAttributes = {
+					12B650F51E39424700A5210F = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 12B650F11E39424700A5210F /* Build configuration list for PBXProject "Lost Phone App" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 12B650ED1E39424700A5210F;
+			productRefGroup = 12B650F71E39424700A5210F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				12B650F51E39424700A5210F /* Lost Phone App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12B650F41E39424700A5210F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12B651041E39424700A5210F /* LaunchScreen.storyboard in Resources */,
+				12B6510C1E3948EE00A5210F /* home alone.png in Resources */,
+				12B651011E39424700A5210F /* Assets.xcassets in Resources */,
+				12B650FF1E39424700A5210F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		12B650F21E39424700A5210F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12B650FC1E39424700A5210F /* ViewController.swift in Sources */,
+				12B650FA1E39424700A5210F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		12B650FD1E39424700A5210F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B650FE1E39424700A5210F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		12B651021E39424700A5210F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12B651031E39424700A5210F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		12B651061E39424700A5210F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		12B651071E39424700A5210F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		12B651091E39424700A5210F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lost Phone App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Barrett.Lost-Phone-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		12B6510A1E39424700A5210F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lost Phone App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Josh-Barrett.Lost-Phone-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12B650F11E39424700A5210F /* Build configuration list for PBXProject "Lost Phone App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12B651061E39424700A5210F /* Debug */,
+				12B651071E39424700A5210F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12B651081E39424700A5210F /* Build configuration list for PBXNativeTarget "Lost Phone App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12B651091E39424700A5210F /* Debug */,
+				12B6510A1E39424700A5210F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 12B650EE1E39424700A5210F /* Project object */;
+}
