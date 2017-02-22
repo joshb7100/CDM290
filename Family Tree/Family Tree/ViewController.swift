@@ -12,7 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
-    var grandparents = ["Bob and Mary Ann"]
+    var grandparents = ["Bob and Mary Ann", "Charlotte and Bob"]
+    var segues = ["Grandparent1", "Grandparent2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Grandparent", sender: nil)
+        performSegue(withIdentifier: segues[indexPath.row], sender: nil)
     }
 
 }

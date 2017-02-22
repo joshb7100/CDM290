@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0mP-tP-rIa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0mP-tP-rIa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,24 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--* = no descendants-->
+        <!--Grandparents-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <viewController title="Grandparents" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
-=======
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> origin/master
-=======
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> parent of bad606b... Family Tree finished
-=======
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> parent of bad606b... Family Tree finished
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Ww-qV-5PP">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="94" width="343" height="573"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -49,21 +35,23 @@
                             <constraint firstItem="2Ww-qV-5PP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ehD-yb-cPJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="* = no descendants" id="Bh4-0V-NiS">
+                    <navigationItem key="navigationItem" title="* = no descendants" prompt="Family Tree" id="Bh4-0V-NiS">
                         <barButtonItem key="backBarButtonItem" title="Grandparents" id="qTm-Tc-4aa"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="2Ww-qV-5PP" id="ZYR-rV-dxa"/>
-                        <segue destination="XlP-sZ-DRM" kind="show" identifier="Grandparent" id="YAF-dA-r6I"/>
+                        <segue destination="XlP-sZ-DRM" kind="show" identifier="Grandparent1" id="YAF-dA-r6I"/>
+                        <segue destination="zt4-Ql-bto" kind="show" identifier="Grandparent2" id="y2z-01-wg2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="36.431784107946029"/>
         </scene>
-        <!--* = no descendants-->
+        <!--Parents-->
         <scene sceneID="KYl-mv-5eA">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="XlP-sZ-DRM" customClass="ParentViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Parents" automaticallyAdjustsScrollViewInsets="NO" id="XlP-sZ-DRM" customClass="ParentViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="acL-He-o35"/>
                         <viewControllerLayoutGuide type="bottom" id="Wpc-hf-xg9"/>
@@ -99,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="1684" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--MartyKids-->
         <scene sceneID="8cB-kz-4Mi">
             <objects>
-                <viewController id="V6p-3Q-Uo9" sceneMemberID="viewController">
+                <viewController title="MartyKids" automaticallyAdjustsScrollViewInsets="NO" id="V6p-3Q-Uo9" customClass="MartyViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="av6-CX-Hzu"/>
                         <viewControllerLayoutGuide type="bottom" id="XUf-t0-LPW"/>
@@ -112,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="miA-ph-7q9">
-                                <rect key="frame" x="16" y="94" width="343" height="573"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -124,15 +112,57 @@
                             <constraint firstItem="XUf-t0-LPW" firstAttribute="top" secondItem="miA-ph-7q9" secondAttribute="bottom" id="iN8-W5-whq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="*= no descendants" id="6jl-sw-YbH"/>
+                    <connections>
+                        <outlet property="tableView" destination="miA-ph-7q9" id="NRI-9x-yFZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOG-5q-NQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2785" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--*=no descendants-->
+        <scene sceneID="Uca-7z-TuR">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zt4-Ql-bto" customClass="CharKidsViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rCz-sD-XE9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ouu-PV-xVZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lKd-Yl-jbb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IaL-55-zq0">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IaL-55-zq0" firstAttribute="trailing" secondItem="lKd-Yl-jbb" secondAttribute="trailingMargin" id="39f-TW-3HC"/>
+                            <constraint firstItem="IaL-55-zq0" firstAttribute="top" secondItem="rCz-sD-XE9" secondAttribute="bottom" id="FkD-WW-fHE"/>
+                            <constraint firstItem="IaL-55-zq0" firstAttribute="leading" secondItem="lKd-Yl-jbb" secondAttribute="leadingMargin" id="hnt-xk-JtQ"/>
+                            <constraint firstItem="ouu-PV-xVZ" firstAttribute="top" secondItem="IaL-55-zq0" secondAttribute="bottom" id="z1w-7k-RtJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="*=no descendants" id="ATh-aL-fmM">
+                        <barButtonItem key="backBarButtonItem" title="Parents" id="Znv-RV-XEA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="IaL-55-zq0" id="Vxh-oi-a0F"/>
+                        <segue destination="1L0-Py-Muc" kind="show" identifier="Shari" id="2kt-6x-pff"/>
+                        <segue destination="V6p-3Q-Uo9" kind="show" identifier="Lisa" id="69q-Eh-DWf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ON-bF-UCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="859"/>
+        </scene>
+        <!--BillKids-->
         <scene sceneID="nE4-rO-JU3">
             <objects>
-                <viewController id="YPa-Ko-xEe" sceneMemberID="viewController">
+                <viewController title="BillKids" automaticallyAdjustsScrollViewInsets="NO" id="YPa-Ko-xEe" customClass="BillViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l4I-1f-zMZ"/>
                         <viewControllerLayoutGuide type="bottom" id="R3l-Kx-55Q"/>
@@ -142,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-tR-hFZ">
-                                <rect key="frame" x="16" y="94" width="343" height="573"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -154,15 +184,53 @@
                             <constraint firstAttribute="trailingMargin" secondItem="OAk-tR-hFZ" secondAttribute="trailing" id="e8B-22-4Ux"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="*= no descendants" id="kht-1w-GtA"/>
+                    <connections>
+                        <outlet property="tableView" destination="OAk-tR-hFZ" id="YAV-tg-kDa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQf-fN-25E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2785" y="797"/>
         </scene>
-        <!--View Controller-->
+        <!--*=no descendants-->
+        <scene sceneID="7CI-ie-gA4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1L0-Py-Muc" customClass="ShariViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ygm-uC-aRx"/>
+                        <viewControllerLayoutGuide type="bottom" id="s0t-uJ-zhk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="25U-bX-c2R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-WP-3RH">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zLx-WP-3RH" secondAttribute="trailing" id="CMq-g9-8cd"/>
+                            <constraint firstItem="zLx-WP-3RH" firstAttribute="leading" secondItem="25U-bX-c2R" secondAttribute="leadingMargin" id="HbS-Vh-hWo"/>
+                            <constraint firstItem="zLx-WP-3RH" firstAttribute="top" secondItem="Ygm-uC-aRx" secondAttribute="bottom" id="JMc-qT-O1V"/>
+                            <constraint firstItem="s0t-uJ-zhk" firstAttribute="top" secondItem="zLx-WP-3RH" secondAttribute="bottom" id="xAR-2h-niP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="*=no descendants" id="yiR-Nm-Ewf"/>
+                    <connections>
+                        <outlet property="tableView" destination="zLx-WP-3RH" id="vNn-KA-cEa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7H-aT-Yki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2785" y="1504"/>
+        </scene>
+        <!--BobKids-->
         <scene sceneID="8bc-vx-u2m">
             <objects>
-                <viewController id="nLF-1o-hFK" sceneMemberID="viewController">
+                <viewController title="BobKids" automaticallyAdjustsScrollViewInsets="NO" id="nLF-1o-hFK" customClass="BobViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vmG-xK-GsQ"/>
                         <viewControllerLayoutGuide type="bottom" id="FnD-ZF-xtr"/>
@@ -172,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eni-WV-31O">
-                                <rect key="frame" x="16" y="94" width="343" height="573"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -184,6 +252,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eni-WV-31O" secondAttribute="trailing" id="pbU-Zh-EbG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="*=no descendants" id="y3G-3S-Q03"/>
+                    <connections>
+                        <outlet property="tableView" destination="eni-WV-31O" id="36p-8H-rZt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHr-gT-zJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,4 +280,7 @@
             <point key="canvasLocation" x="436" y="-647.22638680659679"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="69q-Eh-DWf"/>
+    </inferredMetricsTieBreakers>
 </document>

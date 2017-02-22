@@ -13,7 +13,7 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     
     
-    var parents = ["Bob and Jenny", "Marty and Lisa", "Michael*", "Bill and Lynda", "Linda*", "Tony*"]
+    var parents = ["Bob( and Jenny)", "Marty( and Lisa)", "Michael*", "Bill( and Lynda)", "Linda*", "Tony*"]
     
     var segues = ["BobSegue","MartySegue",nil,"BillSegue",nil,nil]
     
