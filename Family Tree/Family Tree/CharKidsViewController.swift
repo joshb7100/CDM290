@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class CharKidsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var grandparents = ["Bob and Mary Ann"]
+    
+    var charKids = ["Lisa( and Marty)", "Shari( and Gary)"]
+    var segues = ["Lisa","Shari"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +26,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return grandparents.count
+        return charKids.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = grandparents[indexPath.row]
+        cell.textLabel?.text = charKids[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Grandparent", sender: nil)
+        performSegue(withIdentifier: segues[indexPath.row] , sender: nil)
     }
-
+    
 }
 

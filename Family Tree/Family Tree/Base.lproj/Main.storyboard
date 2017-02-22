@@ -15,10 +15,15 @@
             <objects>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <viewController title="Grandparents" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
 =======
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
 >>>>>>> origin/master
+=======
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> parent of bad606b... Family Tree finished
 =======
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
