@@ -13,11 +13,7 @@
         <!--Grandparents-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-<<<<<<< HEAD
                 <viewController title="Grandparents" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
-=======
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Family_Tree" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> origin/master
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
