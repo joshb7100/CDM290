@@ -8,14 +8,12 @@
 
 import UIKit
 
-class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MartyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     
-    var parents = ["Bob( and Jenny)", "Marty( and Lisa)", "Michael*", "Bill( and Lynda)", "Linda*", "Tony*"]
-    
-    var segues = ["BobSegue","MartySegue",nil,"BillSegue",nil,nil]
+    var martyKids = ["Bobby*", "Trevor*", "Josh*"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +24,14 @@ class ParentViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parents.count
+        return martyKids.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = parents[indexPath.row]
+        cell.textLabel?.text = martyKids[indexPath.row]
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(segues[indexPath.row] != nil){
-            performSegue(withIdentifier: segues[indexPath.row]! , sender: nil)
-        }
-    }
-
 }
 

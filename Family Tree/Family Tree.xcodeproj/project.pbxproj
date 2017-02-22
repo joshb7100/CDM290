@@ -13,6 +13,11 @@
 		125961601E5B93E000145EC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1259615F1E5B93E000145EC8 /* Assets.xcassets */; };
 		125961631E5B93E000145EC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125961611E5B93E000145EC8 /* LaunchScreen.storyboard */; };
 		1259616D1E5B988900145EC8 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259616C1E5B988900145EC8 /* ParentViewController.swift */; };
+		3A81DE531E5BAAB7004D348C /* BobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81DE521E5BAAB7004D348C /* BobViewController.swift */; };
+		3A81DE551E5BAAC4004D348C /* MartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81DE541E5BAAC4004D348C /* MartyViewController.swift */; };
+		3A81DE571E5BAACF004D348C /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81DE561E5BAACF004D348C /* BillViewController.swift */; };
+		3A81DE591E5E49E6004D348C /* CharKidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81DE581E5E49E6004D348C /* CharKidsViewController.swift */; };
+		3A81DE5B1E5E4A07004D348C /* ShariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81DE5A1E5E4A07004D348C /* ShariViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		125961621E5B93E000145EC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		125961641E5B93E000145EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1259616C1E5B988900145EC8 /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		3A81DE521E5BAAB7004D348C /* BobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BobViewController.swift; sourceTree = "<group>"; };
+		3A81DE541E5BAAC4004D348C /* MartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MartyViewController.swift; sourceTree = "<group>"; };
+		3A81DE561E5BAACF004D348C /* BillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		3A81DE581E5E49E6004D348C /* CharKidsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharKidsViewController.swift; sourceTree = "<group>"; };
+		3A81DE5A1E5E4A07004D348C /* ShariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +69,11 @@
 				125961581E5B93E000145EC8 /* AppDelegate.swift */,
 				1259615A1E5B93E000145EC8 /* ViewController.swift */,
 				1259616C1E5B988900145EC8 /* ParentViewController.swift */,
+				3A81DE521E5BAAB7004D348C /* BobViewController.swift */,
+				3A81DE541E5BAAC4004D348C /* MartyViewController.swift */,
+				3A81DE561E5BAACF004D348C /* BillViewController.swift */,
+				3A81DE581E5E49E6004D348C /* CharKidsViewController.swift */,
+				3A81DE5A1E5E4A07004D348C /* ShariViewController.swift */,
 				1259615C1E5B93E000145EC8 /* Main.storyboard */,
 				1259615F1E5B93E000145EC8 /* Assets.xcassets */,
 				125961611E5B93E000145EC8 /* LaunchScreen.storyboard */,
@@ -139,9 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A81DE531E5BAAB7004D348C /* BobViewController.swift in Sources */,
+				3A81DE591E5E49E6004D348C /* CharKidsViewController.swift in Sources */,
+				3A81DE5B1E5E4A07004D348C /* ShariViewController.swift in Sources */,
 				1259615B1E5B93E000145EC8 /* ViewController.swift in Sources */,
 				125961591E5B93E000145EC8 /* AppDelegate.swift in Sources */,
+				3A81DE551E5BAAC4004D348C /* MartyViewController.swift in Sources */,
 				1259616D1E5B988900145EC8 /* ParentViewController.swift in Sources */,
+				3A81DE571E5BAACF004D348C /* BillViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +321,7 @@
 				125961691E5B93E000145EC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
