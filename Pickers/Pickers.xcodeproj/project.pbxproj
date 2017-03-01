@@ -17,6 +17,7 @@
 		1215DD291E64C73E00BBF565 /* DoubleComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD281E64C73E00BBF565 /* DoubleComponentPickerViewController.swift */; };
 		1215DD2B1E64C76300BBF565 /* DependentComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD2A1E64C76300BBF565 /* DependentComponentPickerViewController.swift */; };
 		1215DD2D1E64C77100BBF565 /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD2C1E64C77100BBF565 /* CustomPickerViewController.swift */; };
+		3ACF741C1E66808F00D73F8D /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF741B1E66808F00D73F8D /* statedictionary.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1215DD281E64C73E00BBF565 /* DoubleComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleComponentPickerViewController.swift; sourceTree = "<group>"; };
 		1215DD2A1E64C76300BBF565 /* DependentComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentComponentPickerViewController.swift; sourceTree = "<group>"; };
 		1215DD2C1E64C77100BBF565 /* CustomPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
+		3ACF741B1E66808F00D73F8D /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = statedictionary.plist; path = "07 - Picker Data/statedictionary.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				1215DD191E64C20E00BBF565 /* Assets.xcassets */,
 				1215DD1B1E64C20E00BBF565 /* LaunchScreen.storyboard */,
 				1215DD1E1E64C20E00BBF565 /* Info.plist */,
+				3ACF741B1E66808F00D73F8D /* statedictionary.plist */,
 				1215DD241E64C52800BBF565 /* DatePickerViewController.swift */,
 				1215DD261E64C72600BBF565 /* SingleComponentPickerViewController.swift */,
 				1215DD281E64C73E00BBF565 /* DoubleComponentPickerViewController.swift */,
@@ -140,6 +143,7 @@
 			files = (
 				1215DD1D1E64C20E00BBF565 /* LaunchScreen.storyboard in Resources */,
 				1215DD1A1E64C20E00BBF565 /* Assets.xcassets in Resources */,
+				3ACF741C1E66808F00D73F8D /* statedictionary.plist in Resources */,
 				1215DD181E64C20E00BBF565 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +321,7 @@
 				1215DD231E64C20E00BBF565 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
