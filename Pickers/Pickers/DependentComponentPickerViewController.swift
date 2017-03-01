@@ -98,7 +98,7 @@ class DependentComponentPickerViewController: UIViewController, UIPickerViewDele
             return pickerWidth/3
         }
         else{
-            return 2* pickerWidth/3
+            return (2 * pickerWidth)/3
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lzB-Fl-sFz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lzB-Fl-sFz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -109,13 +109,47 @@
                     <view key="view" contentMode="scaleToFill" id="YRf-tT-wUm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKF-FZ-h0n">
+                                <rect key="frame" x="27" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TIA-ii-cOd" id="TAn-ng-bGu"/>
+                                    <outlet property="delegate" destination="TIA-ii-cOd" id="yiS-4I-LBS"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU2-pL-tdo">
+                                <rect key="frame" x="187" y="224" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.028078071964937834" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Voh-qu-RHo">
+                                <rect key="frame" x="172" y="318" width="31" height="30"/>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spin:" destination="TIA-ii-cOd" eventType="touchUpInside" id="hmS-9u-kQJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dU2-pL-tdo" firstAttribute="centerX" secondItem="YRf-tT-wUm" secondAttribute="centerX" id="219-XU-Zy5"/>
+                            <constraint firstItem="dU2-pL-tdo" firstAttribute="top" secondItem="xKF-FZ-h0n" secondAttribute="bottom" constant="8" id="9Ka-EY-pWF"/>
+                            <constraint firstItem="xKF-FZ-h0n" firstAttribute="top" secondItem="YRf-tT-wUm" secondAttribute="topMargin" id="9og-vn-SZ9"/>
+                            <constraint firstItem="xKF-FZ-h0n" firstAttribute="centerX" secondItem="YRf-tT-wUm" secondAttribute="centerX" id="CiD-Yh-Qwu"/>
+                            <constraint firstItem="Voh-qu-RHo" firstAttribute="centerX" secondItem="YRf-tT-wUm" secondAttribute="centerX" id="OzM-t9-TSA"/>
+                            <constraint firstItem="Voh-qu-RHo" firstAttribute="centerY" secondItem="YRf-tT-wUm" secondAttribute="centerY" id="xDo-pP-bsA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="yj6-D0-O6m"/>
+                    <connections>
+                        <outlet property="picker" destination="xKF-FZ-h0n" id="rhf-fT-8pa"/>
+                        <outlet property="winLabel" destination="dU2-pL-tdo" id="zRq-E3-r8d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ri8-K1-LVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="-143"/>
+            <point key="canvasLocation" x="2053.5999999999999" y="-143.47826086956522"/>
         </scene>
         <!--Single-->
         <scene sceneID="UfW-Hy-UIQ">
