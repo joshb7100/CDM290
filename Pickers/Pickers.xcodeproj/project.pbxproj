@@ -18,6 +18,8 @@
 		1215DD2B1E64C76300BBF565 /* DependentComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD2A1E64C76300BBF565 /* DependentComponentPickerViewController.swift */; };
 		1215DD2D1E64C77100BBF565 /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD2C1E64C77100BBF565 /* CustomPickerViewController.swift */; };
 		3ACF741C1E66808F00D73F8D /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF741B1E66808F00D73F8D /* statedictionary.plist */; };
+		3ACF741F1E679C8E00D73F8D /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF741D1E679C8E00D73F8D /* crunch.wav */; };
+		3ACF74201E679C8E00D73F8D /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF741E1E679C8E00D73F8D /* win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		1215DD2A1E64C76300BBF565 /* DependentComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentComponentPickerViewController.swift; sourceTree = "<group>"; };
 		1215DD2C1E64C77100BBF565 /* CustomPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
 		3ACF741B1E66808F00D73F8D /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = statedictionary.plist; path = "07 - Picker Data/statedictionary.plist"; sourceTree = SOURCE_ROOT; };
+		3ACF741D1E679C8E00D73F8D /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = crunch.wav; path = "07 - Picker Sounds/crunch.wav"; sourceTree = SOURCE_ROOT; };
+		3ACF741E1E679C8E00D73F8D /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = "07 - Picker Sounds/win.wav"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				1215DD121E64C20E00BBF565 /* AppDelegate.swift */,
 				1215DD141E64C20E00BBF565 /* ViewController.swift */,
 				1215DD161E64C20E00BBF565 /* Main.storyboard */,
+				3ACF741D1E679C8E00D73F8D /* crunch.wav */,
+				3ACF741E1E679C8E00D73F8D /* win.wav */,
 				1215DD191E64C20E00BBF565 /* Assets.xcassets */,
 				1215DD1B1E64C20E00BBF565 /* LaunchScreen.storyboard */,
 				1215DD1E1E64C20E00BBF565 /* Info.plist */,
@@ -141,8 +147,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ACF741F1E679C8E00D73F8D /* crunch.wav in Resources */,
 				1215DD1D1E64C20E00BBF565 /* LaunchScreen.storyboard in Resources */,
 				1215DD1A1E64C20E00BBF565 /* Assets.xcassets in Resources */,
+				3ACF74201E679C8E00D73F8D /* win.wav in Resources */,
 				3ACF741C1E66808F00D73F8D /* statedictionary.plist in Resources */,
 				1215DD181E64C20E00BBF565 /* Main.storyboard in Resources */,
 			);
