@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zpZ-Ut-99d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lunch-->
+        <scene sceneID="BlL-xn-4Wf">
+            <objects>
+                <viewController id="FFi-Ih-aN9" customClass="FoodViewController" customModule="TabPickerCriticalThinking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bpa-bV-5hI"/>
+                        <viewControllerLayoutGuide type="bottom" id="2h8-0N-i2z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dZ7-r0-ArG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yg4-FH-Q80">
+                                <rect key="frame" x="27" y="0.0" width="320" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBJ-mI-BBv">
+                                <rect key="frame" x="166" y="352" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Total is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kug-pt-hkL">
+                                <rect key="frame" x="138" y="323" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yg4-FH-Q80" firstAttribute="leading" secondItem="dZ7-r0-ArG" secondAttribute="leadingMargin" constant="11" id="Det-t4-U6A"/>
+                            <constraint firstItem="yg4-FH-Q80" firstAttribute="top" secondItem="dZ7-r0-ArG" secondAttribute="topMargin" id="GtO-dy-EuV"/>
+                            <constraint firstItem="qBJ-mI-BBv" firstAttribute="centerX" secondItem="dZ7-r0-ArG" secondAttribute="centerX" id="JYd-nb-8OU"/>
+                            <constraint firstItem="Kug-pt-hkL" firstAttribute="centerY" secondItem="dZ7-r0-ArG" secondAttribute="centerY" id="NOv-wC-v7W"/>
+                            <constraint firstItem="yg4-FH-Q80" firstAttribute="centerX" secondItem="dZ7-r0-ArG" secondAttribute="centerX" id="bda-7k-ctD"/>
+                            <constraint firstItem="Kug-pt-hkL" firstAttribute="centerX" secondItem="dZ7-r0-ArG" secondAttribute="centerX" id="fcA-hp-L7U"/>
+                            <constraint firstItem="qBJ-mI-BBv" firstAttribute="top" secondItem="Kug-pt-hkL" secondAttribute="bottom" constant="8" id="kNF-6S-c7b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yg4-FH-Q80" secondAttribute="trailing" constant="12" id="v73-Ik-d2e"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lunch" image="fork-knife" id="KQs-T0-jbW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIE-lS-R44" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="-218"/>
+        </scene>
+        <!--Tip Calculator-->
+        <scene sceneID="lq8-4r-nmG">
+            <objects>
+                <viewController title="Tip Calculator" id="8Cd-zS-M11" customClass="TipViewController" customModule="TabPickerCriticalThinking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rbw-mG-Fdn"/>
+                        <viewControllerLayoutGuide type="bottom" id="VQ8-i1-TgH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zqf-IW-BA7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSm-3i-X4I">
+                                <rect key="frame" x="27" y="225" width="320" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qem-RO-yvE">
+                                <rect key="frame" x="166" y="449" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR8-HD-8ZO">
+                                <rect key="frame" x="27" y="145" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Dollar Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfA-Gp-9Si">
+                                <rect key="frame" x="127" y="140" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditingWithSender:" destination="8Cd-zS-M11" eventType="editingDidEnd" id="sEP-kr-F8l"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiJ-F6-1Gw">
+                                <rect key="frame" x="127" y="225" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-1O-YdA">
+                                <rect key="frame" x="166" y="478" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="uR8-HD-8ZO" firstAttribute="leading" secondItem="zqf-IW-BA7" secondAttribute="leadingMargin" constant="11" id="69z-M5-TR1"/>
+                            <constraint firstItem="hfA-Gp-9Si" firstAttribute="leading" secondItem="uR8-HD-8ZO" secondAttribute="trailing" constant="8" id="7Xf-sI-qM3"/>
+                            <constraint firstItem="hfA-Gp-9Si" firstAttribute="top" secondItem="Rbw-mG-Fdn" secondAttribute="bottom" constant="120" id="AMU-q3-hK2"/>
+                            <constraint firstItem="uR8-HD-8ZO" firstAttribute="top" secondItem="Rbw-mG-Fdn" secondAttribute="bottom" constant="125" id="AhI-L4-a9o"/>
+                            <constraint firstItem="qem-RO-yvE" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="BBW-Xu-NEY"/>
+                            <constraint firstItem="8jb-1O-YdA" firstAttribute="top" secondItem="qem-RO-yvE" secondAttribute="bottom" constant="8" id="KkW-LO-HOT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hfA-Gp-9Si" secondAttribute="trailing" constant="12" id="LaP-5j-8wn"/>
+                            <constraint firstItem="qem-RO-yvE" firstAttribute="top" secondItem="PSm-3i-X4I" secondAttribute="bottom" constant="8" id="M50-7g-gnc"/>
+                            <constraint firstItem="SiJ-F6-1Gw" firstAttribute="top" secondItem="hfA-Gp-9Si" secondAttribute="bottom" constant="55" id="NMx-OP-DtG"/>
+                            <constraint firstItem="SiJ-F6-1Gw" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="PTt-hB-LJt"/>
+                            <constraint firstItem="PSm-3i-X4I" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="UMb-nQ-NrZ"/>
+                            <constraint firstItem="PSm-3i-X4I" firstAttribute="centerY" secondItem="zqf-IW-BA7" secondAttribute="centerY" id="eKl-dY-I8E"/>
+                            <constraint firstItem="hfA-Gp-9Si" firstAttribute="leading" secondItem="uR8-HD-8ZO" secondAttribute="trailing" constant="8" id="fXt-8E-Nh4"/>
+                            <constraint firstItem="8jb-1O-YdA" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="hrH-QG-ddk"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Mmg-b6-QJs" appends="YES" id="7bo-QC-JSC"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tip" image="dollar-sign" id="R14-Yd-Q3A"/>
+                    <connections>
+                        <outlet property="dollarTextField" destination="hfA-Gp-9Si" id="010-qO-JW2"/>
+                        <outlet property="picker" destination="PSm-3i-X4I" id="LDr-J4-d5E"/>
+                        <outlet property="tipOutput" destination="8jb-1O-YdA" id="hTH-RV-UmX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcV-L3-lXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Mmg-b6-QJs">
+                    <connections>
+                        <action selector="onTapGestureRecognized:" destination="8Cd-zS-M11" id="R8G-rO-Zgi"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1073" y="-218"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fL6-rE-gKG">
+            <objects>
+                <tabBarController id="zpZ-Ut-99d" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Hmc-kE-syC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8Cd-zS-M11" kind="relationship" relationship="viewControllers" id="JQJ-w6-6D9"/>
+                        <segue destination="FFi-Ih-aN9" kind="relationship" relationship="viewControllers" id="uVM-LP-dco"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CiU-u9-MK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="-1074"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollar-sign" width="30" height="30"/>
+        <image name="fork-knife" width="30" height="30"/>
+    </resources>
+</document>
