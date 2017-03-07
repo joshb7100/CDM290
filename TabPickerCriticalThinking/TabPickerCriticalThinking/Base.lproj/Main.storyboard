@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zpZ-Ut-99d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zpZ-Ut-99d">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,6 +24,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yg4-FH-Q80">
                                 <rect key="frame" x="27" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FFi-Ih-aN9" id="z0i-57-J1E"/>
+                                    <outlet property="delegate" destination="FFi-Ih-aN9" id="MO8-Sx-aZS"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBJ-mI-BBv">
                                 <rect key="frame" x="166" y="352" width="42" height="21"/>
@@ -51,6 +55,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lunch" image="fork-knife" id="KQs-T0-jbW"/>
+                    <connections>
+                        <outlet property="picker" destination="yg4-FH-Q80" id="UVH-Rk-r7b"/>
+                        <outlet property="totalOutput" destination="qBJ-mI-BBv" id="3NN-0d-UAq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIE-lS-R44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,13 +78,11 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PSm-3i-X4I">
                                 <rect key="frame" x="27" y="225" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Cd-zS-M11" id="C8D-BE-GqW"/>
+                                    <outlet property="delegate" destination="8Cd-zS-M11" id="QNj-rz-4DD"/>
+                                </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qem-RO-yvE">
-                                <rect key="frame" x="166" y="449" width="43" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR8-HD-8ZO">
                                 <rect key="frame" x="27" y="145" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -104,6 +110,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STd-P4-bgh">
+                                <rect key="frame" x="138" y="440" width="99" height="30"/>
+                                <state key="normal" title="Press for Total"/>
+                                <connections>
+                                    <action selector="onButtonPressed:" destination="8Cd-zS-M11" eventType="touchUpInside" id="1FY-GE-ejY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -112,16 +125,16 @@
                             <constraint firstItem="hfA-Gp-9Si" firstAttribute="leading" secondItem="uR8-HD-8ZO" secondAttribute="trailing" constant="8" id="7Xf-sI-qM3"/>
                             <constraint firstItem="hfA-Gp-9Si" firstAttribute="top" secondItem="Rbw-mG-Fdn" secondAttribute="bottom" constant="120" id="AMU-q3-hK2"/>
                             <constraint firstItem="uR8-HD-8ZO" firstAttribute="top" secondItem="Rbw-mG-Fdn" secondAttribute="bottom" constant="125" id="AhI-L4-a9o"/>
-                            <constraint firstItem="qem-RO-yvE" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="BBW-Xu-NEY"/>
-                            <constraint firstItem="8jb-1O-YdA" firstAttribute="top" secondItem="qem-RO-yvE" secondAttribute="bottom" constant="8" id="KkW-LO-HOT"/>
+                            <constraint firstItem="8jb-1O-YdA" firstAttribute="top" secondItem="STd-P4-bgh" secondAttribute="bottom" constant="8" id="GQw-TM-60Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hfA-Gp-9Si" secondAttribute="trailing" constant="12" id="LaP-5j-8wn"/>
-                            <constraint firstItem="qem-RO-yvE" firstAttribute="top" secondItem="PSm-3i-X4I" secondAttribute="bottom" constant="8" id="M50-7g-gnc"/>
                             <constraint firstItem="SiJ-F6-1Gw" firstAttribute="top" secondItem="hfA-Gp-9Si" secondAttribute="bottom" constant="55" id="NMx-OP-DtG"/>
+                            <constraint firstItem="STd-P4-bgh" firstAttribute="top" secondItem="SiJ-F6-1Gw" secondAttribute="bottom" constant="194" id="Oej-VW-c2r"/>
                             <constraint firstItem="SiJ-F6-1Gw" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="PTt-hB-LJt"/>
                             <constraint firstItem="PSm-3i-X4I" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="UMb-nQ-NrZ"/>
                             <constraint firstItem="PSm-3i-X4I" firstAttribute="centerY" secondItem="zqf-IW-BA7" secondAttribute="centerY" id="eKl-dY-I8E"/>
                             <constraint firstItem="hfA-Gp-9Si" firstAttribute="leading" secondItem="uR8-HD-8ZO" secondAttribute="trailing" constant="8" id="fXt-8E-Nh4"/>
                             <constraint firstItem="8jb-1O-YdA" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="hrH-QG-ddk"/>
+                            <constraint firstItem="STd-P4-bgh" firstAttribute="centerX" secondItem="zqf-IW-BA7" secondAttribute="centerX" id="q2o-nY-fXF"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Mmg-b6-QJs" appends="YES" id="7bo-QC-JSC"/>

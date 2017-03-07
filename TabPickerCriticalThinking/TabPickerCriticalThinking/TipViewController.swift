@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TipViewController: UIViewController {
+class TipViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     @IBOutlet weak var dollarTextField: UITextField!
 
@@ -16,10 +16,13 @@ class TipViewController: UIViewController {
     
     @IBOutlet weak var tipOutput: UILabel!
     
+    private let values = Array(0...100)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tipOutput.text = " "
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +48,23 @@ class TipViewController: UIViewController {
     
     @IBAction func onTapGestureRecognized(_ sender: Any) {
         dollarTextField.resignFirstResponder()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return values.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(values[row])%"
+    }
+    
+    @IBAction func onButtonPressed(_ sender: UIButton) {
+        if dollarTextField.text != ""{
+            let billamt = Double(dollarTextField.text!)
+            tipOutput.text = "$\(round((billamt! * (Double(values[picker.selectedRow(inComponent: 0)])/100 + 1))*100)/100)"
+        }
     }
 
 }
