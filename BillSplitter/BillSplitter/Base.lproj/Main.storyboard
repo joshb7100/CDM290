@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aYe-Oh-rLs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurant View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RestaurantViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="USV-er-GHX"/>
+                    <connections>
+                        <segue destination="AVW-eD-dxo" kind="show" identifier="RestOutput" id="tmc-jE-tA4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1871" y="439"/>
+        </scene>
+        <!--Rest Output View Controller-->
+        <scene sceneID="I7M-ZG-3Dc">
+            <objects>
+                <viewController id="AVW-eD-dxo" customClass="RestOutputViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y1c-wQ-Dsn"/>
+                        <viewControllerLayoutGuide type="bottom" id="O8u-Tf-JJQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ufL-hi-eHE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FU9-bw-sJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1871" y="1152"/>
+        </scene>
+        <!--Rent Output View Controller-->
+        <scene sceneID="pRz-O4-nbY">
+            <objects>
+                <viewController id="XgL-dt-eLA" customClass="RentOutputViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W65-cH-dtb"/>
+                        <viewControllerLayoutGuide type="bottom" id="wQ3-UD-NHn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yPq-bi-0pb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BF-KD-Tde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="1152"/>
+        </scene>
+        <!--Other Output View Controller-->
+        <scene sceneID="L6t-9d-jfZ">
+            <objects>
+                <viewController id="tZM-Qe-OTc" customClass="OtherOutputViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fYT-pK-oG7"/>
+                        <viewControllerLayoutGuide type="bottom" id="fap-g9-Dg6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pnM-c7-en1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hn-aP-Dwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="1152"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="6MV-FV-tod">
+            <objects>
+                <viewController id="Nqs-yx-h7R" customClass="RentViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8wm-wp-1QS"/>
+                        <viewControllerLayoutGuide type="bottom" id="rcM-7c-IBC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B7O-2f-USD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Uue-3o-DHd"/>
+                    <navigationItem key="navigationItem" id="Ff1-sZ-xvL"/>
+                    <connections>
+                        <segue destination="XgL-dt-eLA" kind="show" identifier="RentOutput" id="mKm-li-U7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOI-4T-zBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="439"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="fQv-Mb-RCM">
+            <objects>
+                <viewController id="gc3-zc-AIP" customClass="OtherViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vs6-5j-58g"/>
+                        <viewControllerLayoutGuide type="bottom" id="hEP-aE-cUF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BaZ-RM-Xoz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="XUj-If-Ayq"/>
+                    <navigationItem key="navigationItem" id="n2m-KW-vaF"/>
+                    <connections>
+                        <segue destination="tZM-Qe-OTc" kind="show" identifier="OtherOutput" id="Enw-4U-z4o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te5-uH-jFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="439"/>
+        </scene>
+        <!--Tip-->
+        <scene sceneID="KB3-OJ-AEZ">
+            <objects>
+                <viewController id="2ve-Cm-UYh" customClass="TipViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iqc-cd-ad5"/>
+                        <viewControllerLayoutGuide type="bottom" id="HT1-Px-0mp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BhE-jG-h6e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tip" id="aPJ-2r-3Wv"/>
+                    <navigationItem key="navigationItem" id="9S2-pW-zAf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zp2-oQ-Qmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-335"/>
+        </scene>
+        <!--Past Bills View Controller-->
+        <scene sceneID="TQf-6p-04r">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Jpz-X5-ekO" customClass="PastBillsViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pOh-fm-nef"/>
+                        <viewControllerLayoutGuide type="bottom" id="bM1-Tf-fHU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pwz-gY-hDi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cko-9H-Hol">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bM1-Tf-fHU" firstAttribute="top" secondItem="cko-9H-Hol" secondAttribute="bottom" id="JYy-Cb-PH7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cko-9H-Hol" secondAttribute="trailing" id="YtX-lg-zbO"/>
+                            <constraint firstItem="cko-9H-Hol" firstAttribute="top" secondItem="pOh-fm-nef" secondAttribute="bottom" id="cM9-qr-XHQ"/>
+                            <constraint firstItem="cko-9H-Hol" firstAttribute="leading" secondItem="pwz-gY-hDi" secondAttribute="leadingMargin" id="r7B-UP-lAQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RhR-ee-Efa"/>
+                    <connections>
+                        <segue destination="T0G-9F-5VP" kind="show" identifier="PastRest" id="Jid-i4-NYG"/>
+                        <segue destination="U0g-qL-8pK" kind="show" identifier="PastRent" id="HJR-7b-fHX"/>
+                        <segue destination="HzR-5S-az8" kind="show" identifier="PastOther" id="pTG-Sg-PR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwX-iR-QIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="439"/>
+        </scene>
+        <!--Past Rest View Controller-->
+        <scene sceneID="pWf-Mg-a2m">
+            <objects>
+                <viewController id="T0G-9F-5VP" customClass="PastRestViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dir-h0-YTK"/>
+                        <viewControllerLayoutGuide type="bottom" id="yyb-R0-qca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E8q-rN-YdK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meL-Tr-l40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="1201"/>
+        </scene>
+        <!--Past Rent View Controller-->
+        <scene sceneID="abI-be-EhP">
+            <objects>
+                <viewController id="U0g-qL-8pK" customClass="PastRentViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XfW-Jp-TdW"/>
+                        <viewControllerLayoutGuide type="bottom" id="2uh-MQ-z83"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wqG-nY-zq6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0g-qW-hKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="1202"/>
+        </scene>
+        <!--Past Other View Controller-->
+        <scene sceneID="2cj-wt-KrU">
+            <objects>
+                <viewController id="HzR-5S-az8" customClass="PastOtherViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rm3-aP-2Bl"/>
+                        <viewControllerLayoutGuide type="bottom" id="kOf-ro-HfH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yef-OD-aQE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKn-br-Ozs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="1202"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Yov-xo-22b">
+            <objects>
+                <tabBarController id="aYe-Oh-rLs" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="CqO-a0-jZG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SfR-a0-XLr" kind="relationship" relationship="viewControllers" id="tnY-dH-8YZ"/>
+                        <segue destination="aKn-wx-yNq" kind="relationship" relationship="viewControllers" id="jUK-W5-mxl"/>
+                        <segue destination="JTQ-mM-d0r" kind="relationship" relationship="viewControllers" id="HQL-Zv-QkJ"/>
+                        <segue destination="2ve-Cm-UYh" kind="relationship" relationship="viewControllers" id="daq-Jo-bYK"/>
+                        <segue destination="bL1-uh-TCZ" kind="relationship" relationship="viewControllers" id="2Je-am-GWq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3r-jJ-WG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-1210"/>
+        </scene>
+        <!--Other-->
+        <scene sceneID="ZE1-Da-ifI">
+            <objects>
+                <navigationController id="JTQ-mM-d0r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Other" id="AiA-Ke-yTy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sv1-md-jet">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gc3-zc-AIP" kind="relationship" relationship="rootViewController" id="7nB-5j-wNW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQo-8H-yhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-335"/>
+        </scene>
+        <!--Past Bills-->
+        <scene sceneID="Rhp-37-cGh">
+            <objects>
+                <navigationController id="bL1-uh-TCZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Past Bills" id="FvP-Yk-McI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F1H-E0-ApE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jpz-X5-ekO" kind="relationship" relationship="rootViewController" id="340-ZW-CsK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRO-Ab-DPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="-335"/>
+        </scene>
+        <!--Rent-->
+        <scene sceneID="kcn-sL-5XE">
+            <objects>
+                <navigationController id="aKn-wx-yNq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rent" id="rGH-Ak-1Nd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="419-HY-GJB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nqs-yx-h7R" kind="relationship" relationship="rootViewController" id="e2e-2x-UGv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USv-O2-alM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="-335"/>
+        </scene>
+        <!--Restaurant-->
+        <scene sceneID="jA3-6o-6cu">
+            <objects>
+                <navigationController id="SfR-a0-XLr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Restaurant" id="n0U-F8-xz4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nMA-vQ-fEO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Sj9-f2-rrw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svx-KR-aKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1871" y="-335"/>
+        </scene>
+    </scenes>
+</document>
