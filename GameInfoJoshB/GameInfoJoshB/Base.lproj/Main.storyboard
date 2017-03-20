@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameInfoJoshB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HP4-Yj-0wf">
+                                <rect key="frame" x="0.0" y="165" width="375" height="502"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Q4B-7P-98d"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="omt-ba-GN4"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hII-nL-4ka">
+                                <rect key="frame" x="138" y="28" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESRB Rating:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DJ-Yu-ryH">
+                                <rect key="frame" x="19" y="121" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yox-gv-gy0">
+                                <rect key="frame" x="16" y="71" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7V-rl-xls">
+                                <rect key="frame" x="138" y="71" width="221" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lSt-kV-xJT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGb-4L-ATH">
+                                <rect key="frame" x="138" y="121" width="221" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="221" id="9d5-ha-LlZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="VbE-hq-8gY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yox-gv-gy0" firstAttribute="top" secondItem="hII-nL-4ka" secondAttribute="bottom" constant="22" id="1hS-dQ-OBd"/>
+                            <constraint firstItem="HP4-Yj-0wf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4BA-o5-R89"/>
+                            <constraint firstItem="sGb-4L-ATH" firstAttribute="top" secondItem="d7V-rl-xls" secondAttribute="bottom" constant="29" id="4rK-7A-JIT"/>
+                            <constraint firstItem="hII-nL-4ka" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5Oz-Lw-qtk"/>
+                            <constraint firstItem="6DJ-Yu-ryH" firstAttribute="top" secondItem="yox-gv-gy0" secondAttribute="bottom" constant="29" id="BBO-OI-Tp6"/>
+                            <constraint firstItem="yox-gv-gy0" firstAttribute="trailing" secondItem="6DJ-Yu-ryH" secondAttribute="trailing" id="GVR-bX-tvs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d7V-rl-xls" secondAttribute="trailing" id="Lq1-8m-Ai4"/>
+                            <constraint firstAttribute="trailing" secondItem="HP4-Yj-0wf" secondAttribute="trailing" id="Mt5-da-ewU"/>
+                            <constraint firstItem="sGb-4L-ATH" firstAttribute="leading" secondItem="6DJ-Yu-ryH" secondAttribute="trailing" constant="19" id="XSd-Eb-ZK2"/>
+                            <constraint firstItem="hII-nL-4ka" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dJe-nU-BCI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sGb-4L-ATH" secondAttribute="trailing" id="hWE-Al-EcG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yox-gv-gy0" secondAttribute="leading" id="jCL-kB-IaU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HP4-Yj-0wf" secondAttribute="bottom" id="kZO-nM-poL"/>
+                            <constraint firstItem="d7V-rl-xls" firstAttribute="leading" secondItem="yox-gv-gy0" secondAttribute="trailing" constant="19" id="lZs-Wt-iq0"/>
+                            <constraint firstItem="d7V-rl-xls" firstAttribute="top" secondItem="hII-nL-4ka" secondAttribute="bottom" constant="22" id="tgd-Zs-CNw"/>
+                            <constraint firstItem="HP4-Yj-0wf" firstAttribute="top" secondItem="6DJ-Yu-ryH" secondAttribute="bottom" constant="23" id="y66-9z-itf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ESRBLabel" destination="sGb-4L-ATH" id="hMD-ni-AVw"/>
+                        <outlet property="gameLabel" destination="hII-nL-4ka" id="U2X-7h-ZDD"/>
+                        <outlet property="tableView" destination="HP4-Yj-0wf" id="PrP-I8-1H6"/>
+                        <outlet property="yearLabel" destination="d7V-rl-xls" id="RbI-me-jUr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="107"/>
+        </scene>
+    </scenes>
+</document>
