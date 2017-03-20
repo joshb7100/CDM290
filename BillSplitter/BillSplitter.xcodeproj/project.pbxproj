@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A50FC621E7F8FD600A1B847 /* BillClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A50FC611E7F8FD600A1B847 /* BillClasses.swift */; };
 		3ACF74321E76107C00D73F8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF74311E76107C00D73F8D /* AppDelegate.swift */; };
 		3ACF74341E76107C00D73F8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF74331E76107C00D73F8D /* ViewController.swift */; };
 		3ACF74371E76107C00D73F8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF74351E76107C00D73F8D /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A50FC611E7F8FD600A1B847 /* BillClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillClasses.swift; sourceTree = "<group>"; };
 		3ACF742E1E76107C00D73F8D /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACF74311E76107C00D73F8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ACF74331E76107C00D73F8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				3ACF74531E76161400D73F8D /* PastRestViewController.swift */,
 				3ACF74551E76162000D73F8D /* PastRentViewController.swift */,
 				3ACF74571E76164200D73F8D /* PastOtherViewController.swift */,
+				3A50FC611E7F8FD600A1B847 /* BillClasses.swift */,
 			);
 			path = BillSplitter;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				3ACF74321E76107C00D73F8D /* AppDelegate.swift in Sources */,
 				3ACF74461E76134700D73F8D /* RentViewController.swift in Sources */,
 				3ACF74541E76161400D73F8D /* PastRestViewController.swift in Sources */,
+				3A50FC621E7F8FD600A1B847 /* BillClasses.swift in Sources */,
 				3ACF744A1E76136B00D73F8D /* TipViewController.swift in Sources */,
 				3ACF74581E76164200D73F8D /* PastOtherViewController.swift in Sources */,
 				3ACF74501E7614CE00D73F8D /* RentOutputViewController.swift in Sources */,
@@ -341,6 +345,7 @@
 				3ACF74421E76107D00D73F8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
