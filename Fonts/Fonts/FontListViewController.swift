@@ -20,6 +20,9 @@ class FontListViewController: UITableViewController {
         let preferredTableViewFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         cellPointSize = preferredTableViewFont.pointSize
         tableView.estimatedRowHeight = cellPointSize
+        if showsFavorites{
+            navigationItem.rightBarButtonItem = editButtonItem
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +55,48 @@ class FontListViewController: UITableViewController {
         cell.textLabel?.font = fontForDisplay(atIndexPath: indexPath as NSIndexPath)
         cell.textLabel?.text = fontNames[indexPath.row]
         return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return showsFavorites
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if !showsFavorites {
+            return
+        }
+        
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            let favorite = fontNames[indexPath.row]
+            FavoritesList.sharedFavoritesList.removeFavorite(fontName: favorite)
+            fontNames = FavoritesList.sharedFavoritesList.favorites
+            
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        FavoritesList.sharedFavoritesList.moveItem(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
+        fontNames = FavoritesList.sharedFavoritesList.favorites
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tableViewCell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: tableViewCell)!
+        let font = fontForDisplay(atIndexPath: indexPath as NSIndexPath)
+        
+        if segue.identifier == "ShowFontSizes"{
+            let sizesVC = segue.destination as! FontSizesViewController
+            sizesVC.title = font.fontName
+            sizesVC.font = font
+        }
+        else{
+            let infoVC = segue.destination as! FontInfoViewController
+            infoVC.title = font.fontName
+            infoVC.font = font
+            infoVC.favorite = FavoritesList.sharedFavoritesList.favorites.contains(font.fontName)
+        }
     }
     
 }

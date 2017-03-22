@@ -18,6 +18,12 @@ class FontSizesViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = FontSizesViewController.pointSizes[0]
     }
+    
+    func fontForDisplay(atIndexPath indexPath:NSIndexPath)->UIFont {
+        let pointSize = FontSizesViewController.pointSizes[indexPath.row]
+        return font.withSize(pointSize)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return FontSizesViewController.pointSizes.count
@@ -31,9 +37,6 @@ class FontSizesViewController: UITableViewController {
         return cell
     }
     
-    func fontForDisplay(atIndexPath indexPath:NSIndexPath)->UIFont {
-        let pointSize = FontSizesViewController.pointSizes[indexPath.row]
-        return font.withSize(pointSize)
-    }
+    
 
 }
