@@ -9,13 +9,13 @@
 import UIKit
 
 class RestaurantViewController: UIViewController {
-    private var restaurantBill: restBill
+    //private var restaurantBill: restBill
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        restaurantBill = restBill()
+        //restaurantBill = restBill()
     }
 
     override func didReceiveMemoryWarning() {
