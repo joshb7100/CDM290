@@ -9,6 +9,17 @@
 import UIKit
 
 class RestaurantViewController: UIViewController {
+    var ftotal: Double
+    var numsplit: Int
+    var percent: [Double]
+    var finsplit: [Double]
+    var even: Int
+    var arrayNum: Int
+	var pretax: Double
+    var posttax: Double
+    var tip: Double
+    var paidby: String
+    var names: [String]
 
     override func viewDidLoad() {
         super.viewDidLoad()
