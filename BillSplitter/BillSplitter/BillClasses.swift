@@ -50,6 +50,7 @@
 
 import Foundation
 import Darwin
+import UIKit
 
 //An array to store multiple bills in order to switch between them
 var currBillindex: Int = -1
