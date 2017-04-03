@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12A76F041E92E1AE00B75EBD /* SplitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A76F031E92E1AE00B75EBD /* SplitTableViewCell.swift */; };
+		12A76F061E92E2A600B75EBD /* SplitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A76F051E92E2A600B75EBD /* SplitTableViewCell.xib */; };
 		3A50FC621E7F8FD600A1B847 /* BillClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A50FC611E7F8FD600A1B847 /* BillClasses.swift */; };
 		3ACF74321E76107C00D73F8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF74311E76107C00D73F8D /* AppDelegate.swift */; };
 		3ACF74341E76107C00D73F8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF74331E76107C00D73F8D /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A76F031E92E1AE00B75EBD /* SplitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitTableViewCell.swift; sourceTree = "<group>"; };
+		12A76F051E92E2A600B75EBD /* SplitTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitTableViewCell.xib; sourceTree = "<group>"; };
 		3A50FC611E7F8FD600A1B847 /* BillClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillClasses.swift; sourceTree = "<group>"; };
 		3ACF742E1E76107C00D73F8D /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACF74311E76107C00D73F8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				3ACF74551E76162000D73F8D /* PastRentViewController.swift */,
 				3ACF74571E76164200D73F8D /* PastOtherViewController.swift */,
 				3A50FC611E7F8FD600A1B847 /* BillClasses.swift */,
+				12A76F031E92E1AE00B75EBD /* SplitTableViewCell.swift */,
+				12A76F051E92E2A600B75EBD /* SplitTableViewCell.xib */,
 			);
 			path = BillSplitter;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 			files = (
 				3ACF743C1E76107D00D73F8D /* LaunchScreen.storyboard in Resources */,
 				3ACF74391E76107D00D73F8D /* Assets.xcassets in Resources */,
+				12A76F061E92E2A600B75EBD /* SplitTableViewCell.xib in Resources */,
 				3ACF74371E76107C00D73F8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +186,7 @@
 				3ACF74541E76161400D73F8D /* PastRestViewController.swift in Sources */,
 				3A50FC621E7F8FD600A1B847 /* BillClasses.swift in Sources */,
 				3ACF744A1E76136B00D73F8D /* TipViewController.swift in Sources */,
+				12A76F041E92E1AE00B75EBD /* SplitTableViewCell.swift in Sources */,
 				3ACF74581E76164200D73F8D /* PastOtherViewController.swift in Sources */,
 				3ACF74501E7614CE00D73F8D /* RentOutputViewController.swift in Sources */,
 				3ACF744C1E76139B00D73F8D /* PastBillsViewController.swift in Sources */,
