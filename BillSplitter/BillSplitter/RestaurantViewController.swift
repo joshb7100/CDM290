@@ -11,7 +11,7 @@ import UIKit
 class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     private var tipValues:[Int] = []
     private var peopleValues:[Int] = []
-    //private var restaurantBill: restBill
+    private var restaurantBill: restBill = restBill()
     @IBOutlet weak var pretaxField: UITextField!
     @IBOutlet weak var posttaxField: UITextField!
     @IBOutlet weak var tipPicker: UIPickerView!

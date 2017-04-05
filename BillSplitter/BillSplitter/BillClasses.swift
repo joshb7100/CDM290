@@ -381,6 +381,7 @@ class restBill: bill{
     var pretax: Double
     var posttax: Double
     var tip: Double
+    var tipamt: Double
     var paidby: String
     var names: [String]
     //Default Initialization values for a restaurant bill.
@@ -389,6 +390,7 @@ class restBill: bill{
         self.posttax = 0
         self.tip = 0
         self.paidby = "<unnamed>"
+        self.tipamt = 0
         self.names = []
         super.init()
         self.type = .restaurant
@@ -397,25 +399,6 @@ class restBill: bill{
         self.percent = []
         self.finsplit = []
         self.even = 1
-    }
-    //Function to easily set multiple variables in the class at once.
-    func set(pretax:Double, posttax:Double,tip:Double,numsplit:Int,percent:[Double],even:Int, names:[String], paidby:String){
-        self.pretax = pretax
-        self.posttax = posttax
-        self.tip = tip
-        self.numsplit = numsplit
-        self.percent = percent
-        self.even = even
-        self.names = names
-        self.paidby = paidby
-    }
-    func set(pretax:Double, posttax:Double,tip:Double,numsplit:Int,percent:[Double],even:Int){
-        self.pretax = pretax
-        self.posttax = posttax
-        self.tip = tip
-        self.numsplit = numsplit
-        self.percent = percent
-        self.even = even
     }
     //Errorchecking function automatically called when attempting to output.
     func errcheck() -> Int{
@@ -511,26 +494,7 @@ class restBill: bill{
         self.ftotal = finaltot
         return errnum
     }
-    //Output function to run the program and print results to the screen.
-    func output(){
-        let errnum: Int = restaurantSplit()
-        if(errnum < 0){
-            print("Cannot continue with Output until specified errors are fixed")
-            return
-        }
-        print("Including a \(self.tip * 100)% tip, the final total is $\(ze(number: self.ftotal)).")
-        print("The bill was paid by: \(self.paidby).")
-        print("The split amounts accordingly are:")
-        if(self.even == 1){
-            print("Each of the \(self.numsplit) people pays \(self.paidby) an even split of $\(ze(number: self.finsplit[0]))")
-        }
-        else{
-            for i in 1...self.numsplit{
-                print("\(self.names[i - 1]) is paying \(self.percent[i - 1] * 100)% which will be $\(ze(number: self.finsplit[i - 1]))")
-            }
-        }
-        print(" ")
-    }
+
 }
 
 /**********************************************************************************************

@@ -234,7 +234,7 @@
                     <view key="view" contentMode="scaleToFill" id="yPq-bi-0pb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.37254901960784315" green="0.3529411764705882" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3BF-KD-Tde" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,7 +252,7 @@
                     <view key="view" contentMode="scaleToFill" id="pnM-c7-en1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71764705882352942" green="0.23529411764705882" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hn-aP-Dwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,7 +270,7 @@
                     <view key="view" contentMode="scaleToFill" id="B7O-2f-USD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.37254901960784315" green="0.3529411764705882" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Uue-3o-DHd"/>
                     <navigationItem key="navigationItem" id="Ff1-sZ-xvL"/>
@@ -293,7 +293,7 @@
                     <view key="view" contentMode="scaleToFill" id="BaZ-RM-Xoz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71764705882352942" green="0.23529411764705882" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="XUj-If-Ayq"/>
                     <navigationItem key="navigationItem" id="n2m-KW-vaF"/>
@@ -316,7 +316,7 @@
                     <view key="view" contentMode="scaleToFill" id="BhE-jG-h6e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.8235633389261745" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tip" image="dollar-sign" id="aPJ-2r-3Wv"/>
                     <navigationItem key="navigationItem" id="9S2-pW-zAf"/>
@@ -342,7 +342,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.68133913590604023" blue="0.3628880033557047" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bM1-Tf-fHU" firstAttribute="top" secondItem="cko-9H-Hol" secondAttribute="bottom" id="JYy-Cb-PH7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cko-9H-Hol" secondAttribute="trailing" id="YtX-lg-zbO"/>
