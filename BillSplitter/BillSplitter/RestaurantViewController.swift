@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
     private var tipValues:[Int] = []
     private var peopleValues:[Int] = []
     private var restaurantBill: restBill = restBill()
@@ -83,6 +83,19 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         performSegue(withIdentifier: "RestOutput", sender: nil)
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Int(peoplePicker.selectedRow(inComponent: 0))
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "test"
+        return cell
+    }
     
     
     
@@ -95,5 +108,24 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tipPickerRow = tipPicker.selectedRow(inComponent: 0)
+        restaurantBill.tip = Double(tipValues[tipPickerRow])/100
+        let peoplePickerRow = peoplePicker.selectedRow(inComponent: 0)
+        restaurantBill.numsplit = peopleValues[peoplePickerRow]
+        restaurantBill.pretax = Double(pretaxField.text!)!
+        restaurantBill.posttax = Double(posttaxField.text!)!
+        if(splitSwitch.selectedSegmentIndex == 0){
+            restaurantBill.even = true
+        }
+        else{
+            restaurantBill.even = false
+        }
+        restaurantBill.restaurantSplit()
+        
+        let outputVC = segue.destination as! RestOutputViewController
+        outputVC.restaurantBill = restaurantBill
+    }
 
 }

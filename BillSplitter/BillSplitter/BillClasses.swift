@@ -52,9 +52,6 @@ import Foundation
 import Darwin
 import UIKit
 
-//An array to store multiple bills in order to switch between them
-var currBillindex: Int = -1
-
 //Enumeration used for error checking to make sure we use the correct bill type in functions.
 enum billType{
     case restaurant
@@ -99,11 +96,7 @@ class bill{
     var numsplit: Int
     var percent: [Double]
     var finsplit: [Double]
-    var even: Int
-    var arrayNum: Int
-    func switchBill(){
-        currBillindex = arrayNum
-    }
+    var even: Bool
     //These functions are used for converting the bill class in the array to the respective subclass.
     func restaurant() -> restBill{
         if(self.type == .restaurant){
@@ -148,10 +141,7 @@ class bill{
         self.numsplit = 0
         self.percent = []
         self.finsplit = []
-        self.even = 1
-        self.arrayNum = billArray.count
-        billArray.insert(self, at: arrayNum)
-        currBillindex = arrayNum
+        self.even = true
     }
 }
 
@@ -179,6 +169,7 @@ class tipBill: bill{
         self.tip = tip
     }
     //Errorchecking function automatically called when attempting to output.
+    /*
     func errcheck() -> Int{
         var errval: Int = 0
         if(self.type != .tip){
@@ -203,12 +194,15 @@ class tipBill: bill{
         }
         return errval
     }
+ */
     //Function to calculate the total, called by output.
-    func tipCalc() -> Int{
+    func tipCalc(){
+        /*
         let errnum: Int = self.errcheck()
         if(errnum < 0){
             return errnum
         }
+ */
         //Calculate the tip based on the pretax total.
         let tipamount: Double = self.tip * self.pretax
         //Determine the final total based on tip + posttax total
@@ -216,9 +210,10 @@ class tipBill: bill{
         //Round final total to two decimal places
         finaltot = twodecimal(number: finaltot)
         self.ftotal = finaltot
-        return errnum
+        return
     }
     //Output function to run the program and print results to the screen.
+    /*
     func output(){
         let errnum: Int = tipCalc()
         if(errnum < 0){
@@ -228,6 +223,7 @@ class tipBill: bill{
         print("Including a \(self.tip * 100)% tip, the final total is $\(ze(number: self.ftotal)).")
         print(" ")
     }
+ */
 }
 
 /**********************************************************************************************
@@ -248,24 +244,10 @@ class otherBill: bill{
         self.numsplit = 0
         self.percent = []
         self.finsplit = []
-        self.even = 1
-    }
-    //Function to easily set multiple variables in the class at once.
-    func set(amts: [Double], numsplit: Int, percent: [Double], even: Int){
-        self.amounts = amts
-        self.numsplit = numsplit
-        self.percent = percent
-        self.even = even
-    }
-    func set(amts: [Double], numsplit: Int, percent: [Double], even: Int, names:[String], paidby:String){
-        self.amounts = amts
-        self.numsplit = numsplit
-        self.percent = percent
-        self.even = even
-        self.names = names
-        self.paidby = paidby
+        self.even = true
     }
     //Errorchecking function automatically called when attempting to output.
+    /*
     func errcheck() -> Int{
         var errval: Int = 0
         if(self.type != .other){
@@ -286,25 +268,11 @@ class otherBill: bill{
             print("Cannot split between less than one person")
             errval = -1
         }
-        if((self.even < 0) || (self.even > 1)){
-            print("Invalid input for Even value, use 0 or 1.")
-            errval = -1
-        }
-        if((self.even == 0) && (self.names.count != numsplit)){
-            if((names.count) < numsplit){
-                for _ in (names.count)...(numsplit - 1){
-                    names.append("<unnamed>")
-                }
-            }
-            else{
-                print("There are extra names in the names array.")
-            }
-        }
-        if((self.even == 0) && (percent.count != numsplit)){
+        if((!self.even) && (percent.count != numsplit)){
             print("Numsplit doesn't equal the number of values in percent.")
             errval = -1
         }
-        if(self.even == 0){
+        if(!self.even){
             var temp: Double = 0
             for i in 0...(percent.count - 1){
                 if(percent[i] < 0){
@@ -322,12 +290,15 @@ class otherBill: bill{
         }
         return errval
     }
+ */
     //Function to calculate everything, called by output.
-    func otherSplit() -> Int{
+    func otherSplit(){
+        /*
         let errnum: Int = self.errcheck()
         if(errnum < 0){
             return errnum
         }
+ */
         //Clear the final split array of any pregenerated outputs.
         self.finsplit = []
         var finaltot: Double = 0
@@ -335,7 +306,7 @@ class otherBill: bill{
             finaltot += self.amounts[i]
         }
         //Calculate out the amount each individual pays either by splitting evenly or taking in the inputted percents
-        if(self.even == 1){
+        if(self.even){
             for _ in 1...self.numsplit{
                 //Append each result that is rounded to two decimals
                 self.finsplit.append(twodecimal(number: finaltot / Double(self.numsplit)))
@@ -349,9 +320,10 @@ class otherBill: bill{
             }
         }
         self.ftotal = finaltot
-        return errnum
+        return
     }
     //Output function to run the program and print results to the screen.
+    /*
     func output(){
         let errnum: Int = otherSplit()
         if(errnum < 0){
@@ -371,6 +343,7 @@ class otherBill: bill{
         }
         print(" ")
     }
+ */
 }
 
 /**********************************************************************************************
@@ -398,9 +371,10 @@ class restBill: bill{
         self.numsplit = 0
         self.percent = []
         self.finsplit = []
-        self.even = 1
+        self.even = true
     }
     //Errorchecking function automatically called when attempting to output.
+    /*
     func errcheck() -> Int{
         var errval: Int = 0
         if(self.type != .restaurant){
@@ -463,22 +437,25 @@ class restBill: bill{
         }
         return errval
     }
+ */
     //Function to calculate everything, called by output.
-    func restaurantSplit() -> Int{
+    func restaurantSplit(){
+        /*
         let errnum: Int = self.errcheck()
         if(errnum < 0){
             return errnum
         }
+ */
         //Clear the final split array of any pregenerated outputs.
         self.finsplit = []
         //Calculate the tip based on the pretax total.
-        let tipamount: Double = self.tip * self.pretax
+        self.tipamt = twodecimal(number: (self.tip * self.pretax))
         //Determine the final total based on tip + posttax total
-        var finaltot = tipamount + self.posttax
+        var finaltot = self.tipamt + self.posttax
         //Round final total to two decimal places
         finaltot = twodecimal(number: finaltot)
         //Calculate out the amount each individual pays either by splitting evenly or taking in the inputted percents
-        if(self.even == 1){
+        if(self.even){
             for _ in 1...self.numsplit{
                 //Append each result that is rounded to two decimals
                 self.finsplit.append(twodecimal(number: finaltot / Double(self.numsplit)))
@@ -492,7 +469,7 @@ class restBill: bill{
             }
         }
         self.ftotal = finaltot
-        return errnum
+        return
     }
 
 }
@@ -532,42 +509,10 @@ class rentBill: bill{
         self.numsplit = 0
         self.percent = []
         self.finsplit = []
-        self.even = 1
-    }
-    //Function to easily set multiple variables in the class at once.
-    func set(rent:Double, cable:Double,electric:Double,water:Double,sanitation:Double,internet:Double,heat:Double,other:[Double],numsplit:Int,percent:[Double],even:Int){
-        self.rent = rent
-        self.cable = cable
-        self.electric = electric
-        self.water = water
-        self.sanitation = sanitation
-        self.internet = internet
-        self.heat = heat
-        self.other = []
-        self.other = other
-        self.numsplit = numsplit
-        self.percent = []
-        self.percent = percent
-        self.even = even
-    }
-    func set(rent:Double, cable:Double,electric:Double,water:Double,sanitation:Double,internet:Double,heat:Double,other:[Double],numsplit:Int,percent:[Double],even:Int,names:[String],paidby:String){
-        self.rent = rent
-        self.cable = cable
-        self.electric = electric
-        self.water = water
-        self.sanitation = sanitation
-        self.internet = internet
-        self.heat = heat
-        self.other = []
-        self.other = other
-        self.numsplit = numsplit
-        self.percent = []
-        self.percent = percent
-        self.even = even
-        self.names = names
-        self.paidby = paidby
+        self.even = true
     }
     //Errorchecking function automatically called when attempting to output.
+    /*
     func errcheck() -> Int{
         var errval: Int = 0
         if(self.type != .rent){
@@ -648,12 +593,15 @@ class rentBill: bill{
         }
         return errval
     }
+ */
     //Function to calculate everything, called by output.
-    func rentSplit() -> Int{
+    func rentSplit(){
+        /*
         let errnum: Int = self.errcheck()
         if(errnum < 0){
             return errnum
         }
+ */
         //Clear the final split array of any pregenerated outputs.
         self.finsplit = []
         //Calculate the total of any elements in the other array
@@ -672,7 +620,7 @@ class rentBill: bill{
         //Round final total to two decimal places
         finaltot = twodecimal(number: finaltot)
         //Calculate out the amount each individual pays either by splitting evenly or taking in the inputted percents
-        if(self.even == 1){
+        if(self.even){
             for _ in 1...self.numsplit{
                 //Append each result that is rounded to two decimals
                 self.finsplit.append(twodecimal(number: finaltot / Double(self.numsplit)))
@@ -686,9 +634,10 @@ class rentBill: bill{
             }
         }
         self.ftotal = finaltot
-        return errnum
+        return
     }
     //Output function to run the program and print results to the screen.
+    /*
     func output(){
         let errnum: Int = rentSplit()
         if(errnum < 0){
@@ -718,7 +667,5 @@ class rentBill: bill{
         }
         print(" ")
     }
+ */
 }
-
-//Values used for switching between previously created bills.
-private var billArray = [bill]()
