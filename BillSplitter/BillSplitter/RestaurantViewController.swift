@@ -12,6 +12,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     private var tipValues:[Int] = []
     private var peopleValues:[Int] = []
     private var restaurantBill: restBill = restBill()
+    let splitCellTableIdentifier = "SplitCellTableIdentifier"
     @IBOutlet weak var pretaxField: UITextField!
     @IBOutlet weak var posttaxField: UITextField!
     @IBOutlet weak var tipPicker: UIPickerView!
@@ -32,6 +33,9 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
             peopleValues.append(i)
         }
         tipPicker.selectRow(20, inComponent: 0, animated: false)
+        splitTableView.register(SplitTableViewCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
+        let xib = UINib(nibName: "SplitTableViewCell", bundle: nil)
+        splitTableView.register(xib, forCellReuseIdentifier: splitCellTableIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,12 +92,11 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(peoplePicker.selectedRow(inComponent: 0))
+        return 1 //Int(peoplePicker.selectedRow(inComponent: 0))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "test"
+        let cell:SplitTableViewCell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! SplitTableViewCell
         return cell
     }
     

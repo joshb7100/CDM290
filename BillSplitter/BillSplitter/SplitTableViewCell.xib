@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="6Fo-B1-FPI" customClass="SplitTableViewCell" customModule="BillSplitter" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SplitCellTableIdentifier" rowHeight="97" id="6Fo-B1-FPI" customClass="SplitTableViewCell" customModule="BillSplitter" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Fo-B1-FPI" id="rdl-jU-ZcD">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdn-e9-ZZL">
@@ -38,14 +38,31 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="textFieldDoneEditing:" destination="6Fo-B1-FPI" eventType="editingDidEnd" id="INn-6N-hOF"/>
+                        </connections>
                     </textField>
                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="raG-Bc-p9c">
                         <rect key="frame" x="72" y="34" width="295" height="58"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="Kxj-ma-kxw"/>
+                            <outlet property="delegate" destination="-1" id="VC4-ob-xW5"/>
+                        </connections>
                     </pickerView>
                 </subviews>
             </tableViewCellContentView>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="nameTextField" destination="Dgc-IM-lIf" id="cG7-O0-Ols"/>
+                <outlet property="splitPicker" destination="raG-Bc-p9c" id="y8W-LK-yH2"/>
+            </connections>
             <point key="canvasLocation" x="-87.5" y="-416.5"/>
         </tableViewCell>
+        <tapGestureRecognizer id="yYB-9Z-vYA">
+            <connections>
+                <action selector="onTapRecognized:" destination="6Fo-B1-FPI" id="Fy4-2r-A9y"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
