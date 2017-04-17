@@ -8,10 +8,11 @@
 
 import UIKit
 
-class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource {
     private var tipValues:[Int] = []
     private var peopleValues:[Int] = []
     private var restaurantBill: restBill = restBill()
+    private var splitPercents:[Double] = []
     let splitCellTableIdentifier = "SplitCellTableIdentifier"
     @IBOutlet weak var pretaxField: UITextField!
     @IBOutlet weak var posttaxField: UITextField!
@@ -32,10 +33,14 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         for i in 1...30{
             peopleValues.append(i)
         }
+        for i in 0...1000{
+            splitPercents.append(Double(i)/10)
+        }
         tipPicker.selectRow(20, inComponent: 0, animated: false)
         splitTableView.register(SplitTableViewCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
         let xib = UINib(nibName: "SplitTableViewCell", bundle: nil)
         splitTableView.register(xib, forCellReuseIdentifier: splitCellTableIdentifier)
+        splitTableView.rowHeight = 100
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +67,10 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if(pickerView == tipPicker){
             return tipValues.count
@@ -69,11 +78,10 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         else{
             return peopleValues.count
         }
+        
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if(pickerView == tipPicker){
             return String(tipValues[row]) + "%"
@@ -96,7 +104,10 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:SplitTableViewCell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! SplitTableViewCell
+        //let cell = UITableViewCell()
+        let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! SplitTableViewCell
+        cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
+        cell.nameTextField.text = ""
         return cell
     }
     
