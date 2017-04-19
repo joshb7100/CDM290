@@ -23,5 +23,12 @@ class SplitTableViewCell: UITableViewCell{
 
         // Configure the view for the selected state
     }
+}
 
+class TextFieldClass: NSObject{
+    var text: String = ""
+}
+
+class PickerClass: NSObject {
+    var value: Int = 0
 }

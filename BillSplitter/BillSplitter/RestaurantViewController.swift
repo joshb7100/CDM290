@@ -106,9 +106,59 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = UITableViewCell()
         let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! SplitTableViewCell
+        cell.nameTextField.addTarget(self, action: #selector(AddWizard.doneEditing(_:)), for: .editingDidEndOnExit)
+        cell.splitPicker.tag = (indexPath as NSIndexPath).row
+        cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
+        cell.splitPicker.addTarget(self, action: #selector(AddWizard.sliderChange(_:)), for:)
         cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
         cell.nameTextField.text = ""
         return cell
+    }
+    
+    func doneEditing(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sliderCell", for: indexPath) as! SliderTableViewCell
+        
+        cell.cellSlider.tag = (indexPath as NSIndexPath).row
+        cell.cellSlider.addTarget(self, action: #selector(AddWizard.sliderChange(_:)), for: .valueChanged)
+        cell.cellSlider.addTarget(self, action: #selector(AddWizard.sliderDoneChange(_:)), for: .touchUpInside )
+        cell.cellSlider.addTarget(self, action: #selector(AddWizard.sliderDoneChange(_:)), for: .touchCancel )
+        cell.cellSlider.value = Float(OilList[(indexPath as NSIndexPath).row].oilNum)
+        cell.cellTextLabel.text = OilList[(indexPath as NSIndexPath).row].Name
+        cell.cellNumber.text = String(Int(OilList[(indexPath as NSIndexPath).row].oilNum))
+        cell.cellDetailTextLabel?.text = String(OilList[(indexPath as NSIndexPath).row].oilId)
+        cell.cellSlider.minimumValue = 1
+        cell.cellSlider.maximumValue = 100
+        
+        return cell
+    }
+    
+    
+    func sliderDoneChange(_ sender: UISlider) {
+        var xTotal = 0.0
+        for i in 0...OilList.count - 1 {
+            xTotal = xTotal + OilList[i].oilNum
+        }
+        self.totalOil.text = String(Int(xTotal))
+        
+        
+    }
+    
+    
+    func sliderChange(_ sender: UISlider) {
+        
+        if OilList.count > 0 {
+            let currentValue = sender.value
+            let cell = self.OilTableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! SliderTableViewCell!
+            cell?.cellNumber.text = String(Int(currentValue))
+            OilList[sender.tag].oilNum = Double(Int(currentValue))
+            
+        }
+        
     }
     
     
