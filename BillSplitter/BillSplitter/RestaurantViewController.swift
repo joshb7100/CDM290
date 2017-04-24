@@ -100,18 +100,20 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //Int(peoplePicker.selectedRow(inComponent: 0))
+        return 30 //Int(peoplePicker.selectedRow(inComponent: 0))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = UITableViewCell()
         let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! SplitTableViewCell
+        /*
         cell.nameTextField.addTarget(self, action: #selector(AddWizard.doneEditing(_:)), for: .editingDidEndOnExit)
         cell.splitPicker.tag = (indexPath as NSIndexPath).row
         cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
         cell.splitPicker.addTarget(self, action: #selector(AddWizard.sliderChange(_:)), for:)
         cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
         cell.nameTextField.text = ""
+        */
         return cell
     }
     
@@ -119,7 +121,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         sender.resignFirstResponder()
     }
     
-    
+    /*
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sliderCell", for: indexPath) as! SliderTableViewCell
         
@@ -136,7 +138,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         return cell
     }
-    
+ 
     
     func sliderDoneChange(_ sender: UISlider) {
         var xTotal = 0.0
@@ -160,7 +162,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
         
     }
-    
+    */
     
     
     /*
