@@ -11,6 +11,7 @@ import UIKit
 class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource {
     private var tipValues:[Int] = []
     private var peopleValues:[Int] = []
+    private var arrofarr: [[String]] = []
     private var restaurantBill: restBill = restBill()
     private var splitPercents:[Double] = []
     let splitCellTableIdentifier = "SplitCellTableIdentifier"
@@ -33,8 +34,8 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         for i in 1...30{
             peopleValues.append(i)
         }
-        for i in 0...1000{
-            splitPercents.append(Double(i)/10)
+        for i in 0...200{
+            splitPercents.append(Double(i)/2)
         }
         tipPicker.selectRow(20, inComponent: 0, animated: false)
         splitTableView.register(SplitTableViewCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
@@ -106,14 +107,14 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = UITableViewCell()
         let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! SplitTableViewCell
-        /*
-        cell.nameTextField.addTarget(self, action: #selector(AddWizard.doneEditing(_:)), for: .editingDidEndOnExit)
+        cell.nameTextField.addTarget(self, action: #selector(doneEditing(_:)), for: .editingDidEndOnExit)
         cell.splitPicker.tag = (indexPath as NSIndexPath).row
         cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
-        cell.splitPicker.addTarget(self, action: #selector(AddWizard.sliderChange(_:)), for:)
+        cell.splitPercents = self.splitPercents
+        //cell.splitPicker.addTarget(self, action: #selector(AddWizard.sliderChange(_:)), for: .)
         cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
         cell.nameTextField.text = ""
-        */
+        cell.splitPicker.reloadAllComponents()
         return cell
     }
     

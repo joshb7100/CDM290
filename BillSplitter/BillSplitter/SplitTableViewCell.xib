@@ -20,48 +20,56 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdn-e9-ZZL">
-                        <rect key="frame" x="8" y="8" width="54.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="8" y="8" width="57.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split %:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Via-pa-o5m">
-                        <rect key="frame" x="8" y="53" width="56" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="8" y="58" width="61" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgc-IM-lIf">
-                        <rect key="frame" x="72" y="3" width="295" height="33.5"/>
+                        <rect key="frame" x="75" y="3" width="292" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raG-Bc-p9c">
-                        <rect key="frame" x="72" y="48" width="295" height="39"/>
+                        <rect key="frame" x="95" y="41" width="272" height="55"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="39" id="Lq3-aE-1l8"/>
-                            <constraint firstAttribute="width" constant="295" id="Vec-Yz-PMh"/>
+                            <constraint firstAttribute="height" constant="55" id="R3Z-iY-qUB"/>
+                            <constraint firstAttribute="width" constant="272" id="zKx-6Z-5pU"/>
                         </constraints>
                         <connections>
                             <outlet property="dataSource" destination="-1" id="Kxj-ma-kxw"/>
                             <outlet property="delegate" destination="-1" id="VC4-ob-xW5"/>
                         </connections>
                     </pickerView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrollicon" translatesAutoresizingMaskIntoConstraints="NO" id="xgO-UU-MF9">
+                        <rect key="frame" x="179" y="48" width="27" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="27" id="aOo-EA-q8k"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="Dgc-IM-lIf" secondAttribute="trailing" id="0FC-2N-ebv"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="raG-Bc-p9c" secondAttribute="trailing" id="AWw-Ug-Z8m"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="Via-pa-o5m" secondAttribute="leading" id="F8d-70-vyM"/>
-                    <constraint firstItem="raG-Bc-p9c" firstAttribute="top" secondItem="Dgc-IM-lIf" secondAttribute="bottom" constant="11" id="Fe1-Ge-TeH"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="raG-Bc-p9c" secondAttribute="bottom" constant="5" id="I5I-Zb-762"/>
-                    <constraint firstAttribute="topMargin" secondItem="Hdn-e9-ZZL" secondAttribute="top" id="LKh-af-I89"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Via-pa-o5m" secondAttribute="bottom" constant="18" id="LjI-Or-9C2"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="Hdn-e9-ZZL" secondAttribute="leading" id="TG7-79-cSf"/>
-                    <constraint firstItem="Via-pa-o5m" firstAttribute="top" secondItem="Hdn-e9-ZZL" secondAttribute="bottom" constant="24" id="YBs-az-F1s"/>
-                    <constraint firstItem="Dgc-IM-lIf" firstAttribute="top" secondItem="rdl-jU-ZcD" secondAttribute="topMargin" constant="-5" id="bIL-6O-T3q"/>
-                    <constraint firstItem="Dgc-IM-lIf" firstAttribute="leading" secondItem="Hdn-e9-ZZL" secondAttribute="trailing" constant="9.5" id="poI-Ri-R7w"/>
-                    <constraint firstItem="raG-Bc-p9c" firstAttribute="leading" secondItem="Via-pa-o5m" secondAttribute="trailing" constant="8" id="tp2-GS-N9O"/>
+                    <constraint firstItem="xgO-UU-MF9" firstAttribute="top" secondItem="Dgc-IM-lIf" secondAttribute="bottom" constant="15" id="0dH-qa-bYm"/>
+                    <constraint firstItem="raG-Bc-p9c" firstAttribute="leading" secondItem="Via-pa-o5m" secondAttribute="trailing" constant="26" id="0oX-v2-4kV"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Via-pa-o5m" secondAttribute="bottom" constant="13" id="3vf-Ic-60g"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Via-pa-o5m" secondAttribute="leading" id="CPK-bo-6Xn"/>
+                    <constraint firstItem="Dgc-IM-lIf" firstAttribute="leading" secondItem="Hdn-e9-ZZL" secondAttribute="trailing" constant="9.5" id="EXd-gf-jR0"/>
+                    <constraint firstItem="Dgc-IM-lIf" firstAttribute="top" secondItem="rdl-jU-ZcD" secondAttribute="topMargin" constant="-5" id="HqO-RM-Af8"/>
+                    <constraint firstItem="raG-Bc-p9c" firstAttribute="top" secondItem="rdl-jU-ZcD" secondAttribute="topMargin" constant="33" id="Lat-lS-hWj"/>
+                    <constraint firstItem="xgO-UU-MF9" firstAttribute="leading" secondItem="Via-pa-o5m" secondAttribute="trailing" constant="110" id="UUd-UQ-Jok"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="raG-Bc-p9c" secondAttribute="trailing" id="YI7-WG-aG5"/>
+                    <constraint firstAttribute="topMargin" secondItem="Hdn-e9-ZZL" secondAttribute="top" id="b17-UC-qxh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="raG-Bc-p9c" secondAttribute="bottom" constant="-4" id="bgM-xU-40e"/>
+                    <constraint firstItem="Via-pa-o5m" firstAttribute="top" secondItem="Hdn-e9-ZZL" secondAttribute="bottom" constant="29" id="fsq-qW-GdD"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Hdn-e9-ZZL" secondAttribute="leading" id="mIL-Go-JXE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Dgc-IM-lIf" secondAttribute="trailing" id="s52-hp-w5h"/>
                 </constraints>
             </tableViewCellContentView>
             <gestureRecognizers/>
@@ -72,4 +80,7 @@
             <point key="canvasLocation" x="-87.5" y="-418"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="scrollicon" width="40" height="40"/>
+    </resources>
 </document>

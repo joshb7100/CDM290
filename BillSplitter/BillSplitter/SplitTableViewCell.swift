@@ -8,12 +8,16 @@
 
 import UIKit
 
-class SplitTableViewCell: UITableViewCell{
+class SplitTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource{
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var splitPicker: UIPickerView!
     
+     var splitPercents:[Double] = []
+    
     override func awakeFromNib() {
+        self.splitPicker.delegate = self
+        self.splitPicker.dataSource = self
         super.awakeFromNib()
         // Initialization code
     }
@@ -23,7 +27,21 @@ class SplitTableViewCell: UITableViewCell{
 
         // Configure the view for the selected state
     }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return splitPercents.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String("\(splitPercents[row])%")
+    }
 }
+
+
+
+
 
 class TextFieldClass: NSObject{
     var text: String = ""
