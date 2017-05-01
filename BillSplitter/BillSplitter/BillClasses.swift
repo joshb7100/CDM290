@@ -159,6 +159,7 @@ class tipBill: bill{
         self.pretax = 0
         self.posttax = 0
         self.tip = 0
+        self.tipamt = 0
         super.init()
         self.type = .tip
         self.ftotal = 0
@@ -200,7 +201,7 @@ class tipBill: bill{
         }
  */
         //Calculate the tip based on the pretax total.
-        tipamt = twodecimal(self.tip * self.pretax)
+        tipamt = twodecimal(number: self.tip * self.pretax)
         //Determine the final total based on tip + posttax total
         var finaltot = tipamt + self.posttax
         //Round final total to two decimal places

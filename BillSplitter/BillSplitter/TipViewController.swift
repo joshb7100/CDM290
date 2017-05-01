@@ -8,9 +8,9 @@
 
 import UIKit
 
-class TipViewController: UIViewController {
+class TipViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 	private var tipValues:[Int] = []
-    private var tipBill: tipBill = tipBill()
+    private var tipbill: tipBill = tipBill()
     @IBOutlet weak var pretaxField: UITextField!
     @IBOutlet weak var posttaxField: UITextField!
     @IBOutlet weak var tipPicker: UIPickerView!
@@ -21,7 +21,6 @@ class TipViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        splitTableView.isHidden = true
         for i in 0...100{
             tipValues.append(i)
         }
@@ -45,6 +44,13 @@ class TipViewController: UIViewController {
         posttaxField.resignFirstResponder()
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return tipValues.count
+    }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return String(tipValues[row]) + "%"
@@ -52,12 +58,12 @@ class TipViewController: UIViewController {
     
     @IBAction func billOutput(_ sender: UIButton) {
         let tipPickerRow = tipPicker.selectedRow(inComponent: 0)
-		tipBill.tip = Double(tipValues[tipPickerRow])/100
-		tipBill.pretax = Double(pretaxField.text!)!
-        tipBill.posttax = Double(posttaxField.text!)!
-		tipBill.tipCalc()
-		tipOutput.text = "Tip Amount: $\(ze(tipBill.tipamt))"
-		totalOutput.text = "Total: $\(ze(tipBill.ftotal))"
+		tipbill.tip = Double(tipValues[tipPickerRow])/100
+		tipbill.pretax = Double(pretaxField.text!)!
+        tipbill.posttax = Double(posttaxField.text!)!
+		tipbill.tipCalc()
+		tipOutput.text = "Tip Amount: $\(ze(number: tipbill.tipamt))"
+		totalOutput.text = "Total: $\(ze(number: tipbill.ftotal))"
     }
 
 }
