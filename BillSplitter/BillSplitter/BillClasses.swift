@@ -153,6 +153,7 @@ class tipBill: bill{
     var pretax: Double
     var posttax: Double
     var tip: Double
+	var tipamt: Double
     //Default Initialization values for a tip calculation.
     override init(){
         self.pretax = 0
@@ -162,12 +163,7 @@ class tipBill: bill{
         self.type = .tip
         self.ftotal = 0
     }
-    //Function to easily set multiple variables in the class at once.
-    func set(pretax:Double, posttax:Double,tip:Double){
-        self.pretax = pretax
-        self.posttax = posttax
-        self.tip = tip
-    }
+	
     //Errorchecking function automatically called when attempting to output.
     /*
     func errcheck() -> Int{
@@ -204,9 +200,9 @@ class tipBill: bill{
         }
  */
         //Calculate the tip based on the pretax total.
-        let tipamount: Double = self.tip * self.pretax
+        tipamt = twodecimal(self.tip * self.pretax)
         //Determine the final total based on tip + posttax total
-        var finaltot = tipamount + self.posttax
+        var finaltot = tipamt + self.posttax
         //Round final total to two decimal places
         finaltot = twodecimal(number: finaltot)
         self.ftotal = finaltot

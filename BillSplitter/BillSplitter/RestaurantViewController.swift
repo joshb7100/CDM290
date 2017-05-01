@@ -11,7 +11,6 @@ import UIKit
 class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource {
     private var tipValues:[Int] = []
     private var peopleValues:[Int] = []
-    private var arrofarr: [[String]] = []
     private var restaurantBill: restBill = restBill()
     private var splitPercents:[Double] = []
     let splitCellTableIdentifier = "SplitCellTableIdentifier"
