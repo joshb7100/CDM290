@@ -13,6 +13,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     private var peopleValues:[Int] = []
     private var restaurantBill: restBill = restBill()
     private var splitPercents:[Double] = []
+    private var prevval: Int = 0
     let splitCellTableIdentifier = "SplitCellTableIdentifier"
     @IBOutlet weak var pretaxField: UITextField!
     @IBOutlet weak var posttaxField: UITextField!
@@ -91,6 +92,17 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == peoplePicker{
+            if(row != prevval){
+                prevval = row
+                splitTableView.reloadData()
+            }
+        }
+    }
+
+    
+    
     @IBAction func billOutput(_ sender: UIButton) {
         performSegue(withIdentifier: "RestOutput", sender: nil)
     }
@@ -100,7 +112,8 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30 //Int(peoplePicker.selectedRow(inComponent: 0))
+        let peoplePickerRow = peoplePicker.selectedRow(inComponent: 0)
+        return peopleValues[peoplePickerRow]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -182,6 +195,13 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         restaurantBill.numsplit = peopleValues[peoplePickerRow]
         restaurantBill.pretax = Double(pretaxField.text!)!
         restaurantBill.posttax = Double(posttaxField.text!)!
+        for tag in 0...restaurantBill.numsplit{
+            let indexpath = splitTableView.indexPath(for: <#T##UITableViewCell#>)
+            let cell = splitTableView.cellForRow(at: indexpath! as IndexPath) as! SplitTableViewCell
+            restaurantBill.names.insert(cell.nameTextField.text!, at: tag)
+            restaurantBill.percent.insert(splitPercents[cell.splitPicker.selectedRow(inComponent: 0)], at: tag)
+        }
+   
         if(splitSwitch.selectedSegmentIndex == 0){
             restaurantBill.even = true
         }
