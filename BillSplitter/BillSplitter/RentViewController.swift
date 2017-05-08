@@ -12,7 +12,7 @@ class RentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     private var peopleValues:[Int] = []
     private var rentbill: rentBill = rentBill()
     private var splitPercents:[Double] = []
-    let splitCellTableIdentifier = "SplitCellTableIdentifier"
+    let splitCellTableIdentifier = "RentSplitCellTableIdentifier"
     
     @IBOutlet weak var rentTextField: UITextField!
     @IBOutlet weak var utilitiesTextField: UITextField!
@@ -28,13 +28,16 @@ class RentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         // Do any additional setup after loading the view.
         for i in 1...30{
             peopleValues.append(i)
+            rentbill.names.append("")
         }
         for i in 0...200{
             splitPercents.append(Double(i)/2)
         }
-        splitTableView.register(SplitTableViewCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
-        let xib = UINib(nibName: "SplitTableViewCell", bundle: nil)
+        splitTableView.isHidden = true
+        splitTableView.register(RentTableViewCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
+        let xib = UINib(nibName: "RentTableViewCell", bundle: nil)
         splitTableView.register(xib, forCellReuseIdentifier: splitCellTableIdentifier)
+        splitTableView.rowHeight = 100
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,7 +85,65 @@ class RentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             }
         }
     }
+    @IBAction func billOutput(_ sender: UIButton) {
+        performSegue(withIdentifier: "RentOutput", sender: nil)
+
+    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let peoplePickerRow = peoplePicker.selectedRow(inComponent: 0)
+        return peopleValues[peoplePickerRow]
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = UITableViewCell()
+        let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! RentTableViewCell
+        cell.nameTextField.addTarget(self, action: #selector(doneEditing(_:)), for: .editingDidEndOnExit)
+        cell.splitPicker.tag = (indexPath as NSIndexPath).row
+        cell.nameTextField.tag = (indexPath as NSIndexPath).row
+        cell.splitPercents = self.splitPercents
+        cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
+        cell.nameTextField.text = ""
+        cell.splitPicker.reloadAllComponents()
+        return cell
+    }
+    
+    func doneEditing(_ sender: UITextField) {
+        rentbill.names[sender.tag] = sender.text!
+        sender.resignFirstResponder()
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        rentbill.rent = Double(rentTextField.text!)!
+        rentbill.utilities = Double(utilitiesTextField.text!)!
+        rentbill.othertot = Double(otherTextField.text!)!
+        let peoplePickerRow = peoplePicker.selectedRow(inComponent: 0)
+        rentbill.numsplit = peopleValues[peoplePickerRow]
+        
+        if(splitSwitch.selectedSegmentIndex == 0){
+            rentbill.even = true
+        }
+        else{
+            rentbill.even = false
+            for tag in 0...(rentbill.numsplit - 1){
+                let indexpath = IndexPath.init(row: tag, section: 0)
+                let cell =  splitTableView.cellForRow(at: indexpath) as! RentTableViewCell
+                rentbill.percent.insert(splitPercents[cell.splitPicker.selectedRow(inComponent: 0)]/100, at: tag)
+                rentbill.names.insert(cell.nameTextField.text!, at: tag)
+            }
+        }
+        rentbill.rentSplit()
+        
+        let outputVC = segue.destination as! RentOutputViewController
+        outputVC.rentbill = rentbill
+    }
+
     
     
     

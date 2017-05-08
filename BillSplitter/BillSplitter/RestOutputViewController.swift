@@ -29,7 +29,7 @@ class RestOutputViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         else{
             evenSplitLabel.isHidden = true
-            splitTableView.register(SplitTableViewCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
+            splitTableView.register(FinalSplitCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
             let xib = UINib(nibName: "FinalSplitCell", bundle: nil)
             splitTableView.register(xib, forCellReuseIdentifier: splitCellTableIdentifier)
             splitTableView.rowHeight = 40
@@ -51,10 +51,16 @@ class RestOutputViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! FinalSplitCell
-        cell.nameLabel.text = restaurantBill.names[indexPath.row]
-        cell.priceLabel.text = "$"+String(ze(number: restaurantBill.finsplit[indexPath.row]))
-        return cell
+        if(restaurantBill.even == false){
+            let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! FinalSplitCell
+            cell.nameLabel.text = restaurantBill.names[indexPath.row]
+            cell.priceLabel.text = "$"+String(ze(number: restaurantBill.finsplit[indexPath.row]))
+            return cell
+        }
+        else{
+            let cell:UITableViewCell = UITableViewCell.init()
+            return cell
+        }
     }
     
 

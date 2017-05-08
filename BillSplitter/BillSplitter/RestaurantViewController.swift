@@ -136,49 +136,6 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         sender.resignFirstResponder()
     }
     
-    /*
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sliderCell", for: indexPath) as! SliderTableViewCell
-        
-        cell.cellSlider.tag = (indexPath as NSIndexPath).row
-        cell.cellSlider.addTarget(self, action: #selector(AddWizard.sliderChange(_:)), for: .valueChanged)
-        cell.cellSlider.addTarget(self, action: #selector(AddWizard.sliderDoneChange(_:)), for: .touchUpInside )
-        cell.cellSlider.addTarget(self, action: #selector(AddWizard.sliderDoneChange(_:)), for: .touchCancel )
-        cell.cellSlider.value = Float(OilList[(indexPath as NSIndexPath).row].oilNum)
-        cell.cellTextLabel.text = OilList[(indexPath as NSIndexPath).row].Name
-        cell.cellNumber.text = String(Int(OilList[(indexPath as NSIndexPath).row].oilNum))
-        cell.cellDetailTextLabel?.text = String(OilList[(indexPath as NSIndexPath).row].oilId)
-        cell.cellSlider.minimumValue = 1
-        cell.cellSlider.maximumValue = 100
-        
-        return cell
-    }
- 
-    
-    func sliderDoneChange(_ sender: UISlider) {
-        var xTotal = 0.0
-        for i in 0...OilList.count - 1 {
-            xTotal = xTotal + OilList[i].oilNum
-        }
-        self.totalOil.text = String(Int(xTotal))
-        
-        
-    }
-    
-    
-    func sliderChange(_ sender: UISlider) {
-        
-        if OilList.count > 0 {
-            let currentValue = sender.value
-            let cell = self.OilTableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! SliderTableViewCell!
-            cell?.cellNumber.text = String(Int(currentValue))
-            OilList[sender.tag].oilNum = Double(Int(currentValue))
-            
-        }
-        
-    }
-    */
-    
     
     /*
     // MARK: - Navigation
@@ -197,18 +154,18 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         restaurantBill.numsplit = peopleValues[peoplePickerRow]
         restaurantBill.pretax = Double(pretaxField.text!)!
         restaurantBill.posttax = Double(posttaxField.text!)!
-        for tag in 0...(restaurantBill.numsplit - 1){
-            let indexpath = IndexPath.init(row: tag, section: 0)
-            let cell =  splitTableView.cellForRow(at: indexpath) as! SplitTableViewCell
-            restaurantBill.percent.insert(splitPercents[cell.splitPicker.selectedRow(inComponent: 0)]/100, at: tag)
-            restaurantBill.names.insert(cell.nameTextField.text!, at: tag)
-        }
    
         if(splitSwitch.selectedSegmentIndex == 0){
             restaurantBill.even = true
         }
         else{
             restaurantBill.even = false
+            for tag in 0...(restaurantBill.numsplit - 1){
+                let indexpath = IndexPath.init(row: tag, section: 0)
+                let cell =  splitTableView.cellForRow(at: indexpath) as! SplitTableViewCell
+                restaurantBill.percent.insert(splitPercents[cell.splitPicker.selectedRow(inComponent: 0)]/100, at: tag)
+                restaurantBill.names.insert(cell.nameTextField.text!, at: tag)
+            }
         }
         restaurantBill.restaurantSplit()
         

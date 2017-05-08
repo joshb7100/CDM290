@@ -270,8 +270,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="AVW-eD-dxo" id="pOW-q4-Z3y"/>
-                                    <outlet property="delegate" destination="AVW-eD-dxo" id="3b5-kP-Fz6"/>
+                                    <outlet property="dataSource" destination="XgL-dt-eLA" id="o83-IE-OCH"/>
+                                    <outlet property="delegate" destination="XgL-dt-eLA" id="yjt-Zt-5FK"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Eb-25-yTm">
@@ -305,6 +305,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.37254901960784315" green="0.3529411764705882" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="evenSplitLabel" destination="rNz-mL-RlX" id="Mgx-1P-iuC"/>
+                        <outlet property="splitTableView" destination="0zR-CY-A1a" id="DIx-y7-Yqa"/>
+                        <outlet property="totalLabel" destination="dSu-ZN-QOB" id="bvl-41-N8K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3BF-KD-Tde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -404,8 +409,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HcD-8s-UA1"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0ZD-b0-kLi"/>
+                                    <outlet property="dataSource" destination="Nqs-yx-h7R" id="iKO-I0-yhr"/>
+                                    <outlet property="delegate" destination="Nqs-yx-h7R" id="2Sz-2N-D9U"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wG0-10-xVp">
@@ -418,6 +423,7 @@
                                     <color key="titleColor" red="0.98974553399999998" green="1" blue="0.96919889100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="billOutput:" destination="Nqs-yx-h7R" eventType="touchUpInside" id="9Qs-Ea-jbm"/>
                                     <action selector="billOutput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ud8-m1-aVA"/>
                                 </connections>
                             </button>
@@ -432,8 +438,8 @@
                                 <rect key="frame" x="206" y="212" width="127" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="X2g-vi-Hhx"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7VW-TY-jDe"/>
+                                    <outlet property="dataSource" destination="Nqs-yx-h7R" id="n81-yj-yLu"/>
+                                    <outlet property="delegate" destination="Nqs-yx-h7R" id="4E4-ug-eTO"/>
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EN-bP-GgV">
@@ -444,7 +450,6 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="Nqs-yx-h7R" eventType="editingDidEnd" id="SOj-Hg-Y96"/>
-                                    <action selector="textFieldDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7NJ-q7-F69"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rent:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQU-xa-hab">
@@ -462,7 +467,6 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="Nqs-yx-h7R" eventType="editingDidEnd" id="Qeg-W2-ScP"/>
-                                    <action selector="textFieldDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wgF-iG-0bg"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnG-zK-6El">
@@ -480,7 +484,6 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="textFieldDoneEditing:" destination="Nqs-yx-h7R" eventType="editingDidEnd" id="lbV-cb-m2O"/>
-                                    <action selector="textFieldDoneEditingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="gLR-Sb-U3Z"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Utilities:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cer-e1-3Cx">

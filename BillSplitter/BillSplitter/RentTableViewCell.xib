@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RentSplitCellTableIdentifier" rowHeight="103" id="VFa-mK-Qex" customClass="RentTableViewCell" customModule="BillSplitter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VFa-mK-Qex" id="P0o-qL-MJV">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKT-TK-jcz">
+                        <rect key="frame" x="8" y="8" width="57.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split %:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S68-Bq-Bgj">
+                        <rect key="frame" x="8" y="58" width="61" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dN-DZ-3eQ">
+                        <rect key="frame" x="75" y="3" width="292" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXT-Ur-QjY">
+                        <rect key="frame" x="95" y="41" width="272" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="3Kw-jK-V9N"/>
+                            <constraint firstAttribute="width" constant="272" id="Y8W-3d-wnF"/>
+                        </constraints>
+                    </pickerView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scrollicon" translatesAutoresizingMaskIntoConstraints="NO" id="P9g-Wj-CVN">
+                        <rect key="frame" x="179" y="48" width="27" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="27" id="XfQ-3M-N1t"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.29497334567152977" green="0.3880126960610088" blue="0.98677295435897439" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="2dN-DZ-3eQ" firstAttribute="leading" secondItem="uKT-TK-jcz" secondAttribute="trailing" constant="9.5" id="3SB-7x-VuM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mXT-Ur-QjY" secondAttribute="bottom" constant="-4" id="IGO-rR-2Fe"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2dN-DZ-3eQ" secondAttribute="trailing" id="MTG-Pu-cSi"/>
+                    <constraint firstItem="S68-Bq-Bgj" firstAttribute="top" secondItem="uKT-TK-jcz" secondAttribute="bottom" constant="29" id="RUM-LA-dWK"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="uKT-TK-jcz" secondAttribute="leading" id="VoM-4Q-4Vv"/>
+                    <constraint firstItem="mXT-Ur-QjY" firstAttribute="top" secondItem="P0o-qL-MJV" secondAttribute="topMargin" constant="33" id="VzC-ZQ-Ilf"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="S68-Bq-Bgj" secondAttribute="leading" id="dg8-aE-kOw"/>
+                    <constraint firstAttribute="topMargin" secondItem="uKT-TK-jcz" secondAttribute="top" id="fdc-4Y-C31"/>
+                    <constraint firstItem="P9g-Wj-CVN" firstAttribute="top" secondItem="2dN-DZ-3eQ" secondAttribute="bottom" constant="15" id="hHt-3A-6a5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="S68-Bq-Bgj" secondAttribute="bottom" constant="13" id="hye-nW-szx"/>
+                    <constraint firstItem="mXT-Ur-QjY" firstAttribute="leading" secondItem="S68-Bq-Bgj" secondAttribute="trailing" constant="26" id="lF7-Xi-Muk"/>
+                    <constraint firstItem="P9g-Wj-CVN" firstAttribute="leading" secondItem="S68-Bq-Bgj" secondAttribute="trailing" constant="110" id="s8x-aQ-9Em"/>
+                    <constraint firstItem="2dN-DZ-3eQ" firstAttribute="top" secondItem="P0o-qL-MJV" secondAttribute="topMargin" constant="-5" id="yHx-xo-kgT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mXT-Ur-QjY" secondAttribute="trailing" id="z6I-EE-7AO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="nameTextField" destination="2dN-DZ-3eQ" id="bgz-1T-now"/>
+                <outlet property="splitPicker" destination="mXT-Ur-QjY" id="vJV-Vd-QdX"/>
+            </connections>
+            <point key="canvasLocation" x="-87.5" y="-418"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="scrollicon" width="40" height="40"/>
+    </resources>
+</document>

@@ -477,6 +477,8 @@ class restBill: bill{
  *********************************************************************************************/
 class rentBill: bill{
     var rent: Double
+    var utilities: Double
+    /*
     var cable: Double
     var electric: Double
     var water: Double
@@ -484,12 +486,14 @@ class rentBill: bill{
     var internet: Double
     var heat: Double
     var other: [Double]
+     */
     var othertot: Double
     var paidby: String
     var names: [String]
     //Default Initialization values for a rent bill.
     override init(){
         self.rent = 0
+        /*
         self.cable = 0
         self.electric = 0
         self.water = 0
@@ -497,9 +501,11 @@ class rentBill: bill{
         self.internet = 0
         self.heat = 0
         self.other = []
+         */
         self.othertot = 0
         self.paidby = "<unnamed>"
         self.names = []
+        self.utilities = 0
         super.init()
         self.type = .rent
         self.ftotal = 0
@@ -602,18 +608,24 @@ class rentBill: bill{
         //Clear the final split array of any pregenerated outputs.
         self.finsplit = []
         //Calculate the total of any elements in the other array
+        /*
         for i in 0...(self.other.count - 1){
             self.othertot += self.other[i]
         }
+         */
         //Calculate the final rent total from all of the utilities
         var finaltot: Double = 0
         finaltot += self.rent
+        finaltot += self.utilities
+        finaltot += self.othertot
+        /*
         finaltot += self.cable
         finaltot += self.electric
         finaltot += self.water
         finaltot += self.sanitation
         finaltot += self.internet
         finaltot += self.heat
+         */
         //Round final total to two decimal places
         finaltot = twodecimal(number: finaltot)
         //Calculate out the amount each individual pays either by splitting evenly or taking in the inputted percents

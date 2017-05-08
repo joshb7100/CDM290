@@ -1,19 +1,19 @@
 //
-//  SplitTableViewCell.swift
+//  RentTableViewCell.swift
 //  BillSplitter
 //
-//  Created by Josh T. Barrett on 4/3/17.
+//  Created by Robert Barrett on 5/8/17.
 //  Copyright © 2017 Josh Barrett. All rights reserved.
 //
 
 import UIKit
 
-class SplitTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource{
+class RentTableViewCell: UITableViewCell, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var splitPicker: UIPickerView!
     
-     var splitPercents:[Double] = []
+    var splitPercents:[Double] = []
     var pickerPercents: [Double] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     
     override func awakeFromNib() {
@@ -22,10 +22,10 @@ class SplitTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDat
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

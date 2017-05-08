@@ -12,6 +12,10 @@
 		3A50FC621E7F8FD600A1B847 /* BillClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A50FC611E7F8FD600A1B847 /* BillClasses.swift */; };
 		3A837A221EBFF2EA003220BD /* FinalSplitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A837A201EBFF2EA003220BD /* FinalSplitCell.swift */; };
 		3A837A231EBFF2EA003220BD /* FinalSplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A837A211EBFF2EA003220BD /* FinalSplitCell.xib */; };
+		3A837A261EC0351A003220BD /* RentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A837A241EC0351A003220BD /* RentTableViewCell.swift */; };
+		3A837A271EC0351A003220BD /* RentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A837A251EC0351A003220BD /* RentTableViewCell.xib */; };
+		3A837A2E1EC03674003220BD /* FinalRentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A837A2C1EC03673003220BD /* FinalRentTableViewCell.swift */; };
+		3A837A2F1EC03674003220BD /* FinalRentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A837A2D1EC03673003220BD /* FinalRentTableViewCell.xib */; };
 		3ACF74321E76107C00D73F8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF74311E76107C00D73F8D /* AppDelegate.swift */; };
 		3ACF74341E76107C00D73F8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF74331E76107C00D73F8D /* ViewController.swift */; };
 		3ACF74371E76107C00D73F8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACF74351E76107C00D73F8D /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 		3A50FC611E7F8FD600A1B847 /* BillClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillClasses.swift; sourceTree = "<group>"; };
 		3A837A201EBFF2EA003220BD /* FinalSplitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSplitCell.swift; sourceTree = "<group>"; };
 		3A837A211EBFF2EA003220BD /* FinalSplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalSplitCell.xib; sourceTree = "<group>"; };
+		3A837A241EC0351A003220BD /* RentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentTableViewCell.swift; sourceTree = "<group>"; };
+		3A837A251EC0351A003220BD /* RentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RentTableViewCell.xib; sourceTree = "<group>"; };
+		3A837A2C1EC03673003220BD /* FinalRentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalRentTableViewCell.swift; sourceTree = "<group>"; };
+		3A837A2D1EC03673003220BD /* FinalRentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalRentTableViewCell.xib; sourceTree = "<group>"; };
 		3ACF742E1E76107C00D73F8D /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACF74311E76107C00D73F8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ACF74331E76107C00D73F8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,16 +94,20 @@
 				3ACF743D1E76107D00D73F8D /* Info.plist */,
 				3ACF74431E76133600D73F8D /* RestaurantViewController.swift */,
 				3ACF744D1E7614BE00D73F8D /* RestOutputViewController.swift */,
-				3ACF74451E76134700D73F8D /* RentViewController.swift */,
-				3ACF744F1E7614CE00D73F8D /* RentOutputViewController.swift */,
-				3ACF74471E76135E00D73F8D /* OtherViewController.swift */,
-				3ACF74511E7614DE00D73F8D /* OtherOutputViewController.swift */,
-				3ACF74491E76136B00D73F8D /* TipViewController.swift */,
-				3A50FC611E7F8FD600A1B847 /* BillClasses.swift */,
 				12A76F031E92E1AE00B75EBD /* SplitTableViewCell.swift */,
 				12A76F051E92E2A600B75EBD /* SplitTableViewCell.xib */,
 				3A837A201EBFF2EA003220BD /* FinalSplitCell.swift */,
 				3A837A211EBFF2EA003220BD /* FinalSplitCell.xib */,
+				3ACF74451E76134700D73F8D /* RentViewController.swift */,
+				3ACF744F1E7614CE00D73F8D /* RentOutputViewController.swift */,
+				3A837A241EC0351A003220BD /* RentTableViewCell.swift */,
+				3A837A251EC0351A003220BD /* RentTableViewCell.xib */,
+				3A837A2C1EC03673003220BD /* FinalRentTableViewCell.swift */,
+				3A837A2D1EC03673003220BD /* FinalRentTableViewCell.xib */,
+				3ACF74471E76135E00D73F8D /* OtherViewController.swift */,
+				3ACF74511E7614DE00D73F8D /* OtherOutputViewController.swift */,
+				3ACF74491E76136B00D73F8D /* TipViewController.swift */,
+				3A50FC611E7F8FD600A1B847 /* BillClasses.swift */,
 			);
 			path = BillSplitter;
 			sourceTree = "<group>";
@@ -163,6 +175,8 @@
 				3ACF74391E76107D00D73F8D /* Assets.xcassets in Resources */,
 				3A837A231EBFF2EA003220BD /* FinalSplitCell.xib in Resources */,
 				12A76F061E92E2A600B75EBD /* SplitTableViewCell.xib in Resources */,
+				3A837A2F1EC03674003220BD /* FinalRentTableViewCell.xib in Resources */,
+				3A837A271EC0351A003220BD /* RentTableViewCell.xib in Resources */,
 				3ACF74371E76107C00D73F8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,7 +195,9 @@
 				3A837A221EBFF2EA003220BD /* FinalSplitCell.swift in Sources */,
 				3A50FC621E7F8FD600A1B847 /* BillClasses.swift in Sources */,
 				3ACF744A1E76136B00D73F8D /* TipViewController.swift in Sources */,
+				3A837A261EC0351A003220BD /* RentTableViewCell.swift in Sources */,
 				12A76F041E92E1AE00B75EBD /* SplitTableViewCell.swift in Sources */,
+				3A837A2E1EC03674003220BD /* FinalRentTableViewCell.swift in Sources */,
 				3ACF74501E7614CE00D73F8D /* RentOutputViewController.swift in Sources */,
 				3ACF74481E76135E00D73F8D /* OtherViewController.swift in Sources */,
 				3ACF74521E7614DE00D73F8D /* OtherOutputViewController.swift in Sources */,
