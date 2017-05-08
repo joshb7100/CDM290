@@ -33,6 +33,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
         for i in 1...30{
             peopleValues.append(i)
+            restaurantBill.names.append("")
         }
         for i in 0...200{
             splitPercents.append(Double(i)/2)
@@ -121,7 +122,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! SplitTableViewCell
         cell.nameTextField.addTarget(self, action: #selector(doneEditing(_:)), for: .editingDidEndOnExit)
         cell.splitPicker.tag = (indexPath as NSIndexPath).row
-        cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
+        cell.nameTextField.tag = (indexPath as NSIndexPath).row
         cell.splitPercents = self.splitPercents
         //cell.splitPicker.addTarget(self, action: #selector(AddWizard.sliderChange(_:)), for: .)
         cell.splitPicker.selectRow(0, inComponent: 0, animated: false)
@@ -131,6 +132,7 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     func doneEditing(_ sender: UITextField) {
+        restaurantBill.names[sender.tag] = sender.text!
         sender.resignFirstResponder()
     }
     
@@ -195,11 +197,11 @@ class RestaurantViewController: UIViewController, UIPickerViewDelegate, UIPicker
         restaurantBill.numsplit = peopleValues[peoplePickerRow]
         restaurantBill.pretax = Double(pretaxField.text!)!
         restaurantBill.posttax = Double(posttaxField.text!)!
-        for tag in 0...restaurantBill.numsplit{
-            let indexpath = splitTableView.indexPath(for: <#T##UITableViewCell#>)
-            let cell = splitTableView.cellForRow(at: indexpath! as IndexPath) as! SplitTableViewCell
+        for tag in 0...(restaurantBill.numsplit - 1){
+            let indexpath = IndexPath.init(row: tag, section: 0)
+            let cell =  splitTableView.cellForRow(at: indexpath) as! SplitTableViewCell
+            restaurantBill.percent.insert(splitPercents[cell.splitPicker.selectedRow(inComponent: 0)]/100, at: tag)
             restaurantBill.names.insert(cell.nameTextField.text!, at: tag)
-            restaurantBill.percent.insert(splitPercents[cell.splitPicker.selectedRow(inComponent: 0)], at: tag)
         }
    
         if(splitSwitch.selectedSegmentIndex == 0){

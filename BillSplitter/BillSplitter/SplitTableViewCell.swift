@@ -14,6 +14,7 @@ class SplitTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var splitPicker: UIPickerView!
     
      var splitPercents:[Double] = []
+    var pickerPercents: [Double] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     
     override func awakeFromNib() {
         self.splitPicker.delegate = self
@@ -39,12 +40,9 @@ class SplitTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        <#code#>
+        pickerPercents[pickerView.tag] = splitPercents[row]
     }
 }
-
-
-
 
 
 class TextFieldClass: NSObject{

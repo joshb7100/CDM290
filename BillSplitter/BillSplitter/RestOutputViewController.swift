@@ -8,13 +8,14 @@
 
 import UIKit
 
-class RestOutputViewController: UIViewController {
+class RestOutputViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var evenSplitLabel: UILabel!
     var restaurantBill: restBill = restBill()
     @IBOutlet weak var splitTableView: UITableView!
+    let splitCellTableIdentifier = "FinalSplitCellTableIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,13 @@ class RestOutputViewController: UIViewController {
             evenSplitLabel.text = "Everyone pays $\(ze(number: restaurantBill.finsplit[0]))"
             splitTableView.isHidden = true
         }
+        else{
+            evenSplitLabel.isHidden = true
+            splitTableView.register(SplitTableViewCell.self, forCellReuseIdentifier: splitCellTableIdentifier)
+            let xib = UINib(nibName: "FinalSplitCell", bundle: nil)
+            splitTableView.register(xib, forCellReuseIdentifier: splitCellTableIdentifier)
+            splitTableView.rowHeight = 40
+        }
         
     }
 
@@ -36,6 +44,17 @@ class RestOutputViewController: UIViewController {
     
     
     @IBAction func emailButtonPressed(_ sender: UIButton) {
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return restaurantBill.numsplit
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = splitTableView.dequeueReusableCell(withIdentifier: splitCellTableIdentifier, for: indexPath) as! FinalSplitCell
+        cell.nameLabel.text = restaurantBill.names[indexPath.row]
+        cell.priceLabel.text = "$"+String(ze(number: restaurantBill.finsplit[indexPath.row]))
+        return cell
     }
     
 
